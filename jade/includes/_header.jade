@@ -1,4 +1,12 @@
 header.header
 	.container-fluid
+		ul.univ__list.list-inline
+			each item in univ_menu
+				li.univ__item: a.univ__link(href="#") #{item}
+		.enter__block
+			p.enter__text Добро пожаловать!
+			a.enter__link.enter(href="#") Вход
+			//- a.enter__link.profile(href="#") Профиль
+			//- a.enter__link.exit(href="#") Выйти
 		a.b-header__logo(href="/")
 			img(src="img/logo.png" alt="Site Logo")
