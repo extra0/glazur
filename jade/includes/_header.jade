@@ -1,12 +1,38 @@
 header.header
 	.container-fluid
-		ul.univ__list.list-inline
-			each item in univ_menu
-				li.univ__item: a.univ__link(href="#") #{item}
-		.enter__block
-			p.enter__text Добро пожаловать!
-			a.enter__link.enter(href="#") Вход
-			//- a.enter__link.profile(href="#") Профиль
-			//- a.enter__link.exit(href="#") Выйти
-		a.b-header__logo(href="/")
+		.header__top
+			.cart__block
+				span.cart__image
+				p.cart__title Корзина
+				span.cart__empty пока пуста :(
+			ul.univ__list.list-inline
+				each item in univ_menu
+					li.univ__item: a.univ__link(href="#") #{item}
+			.enter__block
+				p.enter__text Добро пожаловать!
+				a.enter__link.enter(href="#") Вход
+				//- a.enter__link.profile(href="#") Профиль
+				//- a.enter__link.exit(href="#") Выйти
+		a.header__logo(href="/")
 			img(src="img/logo.png" alt="Site Logo")
+		.header__location
+			a.header__location-link(href="#")
+				span.header__line Одесса, “Сити 25”, бутик №337
+		.header__time
+			p.header__time-text Звоните с 11<sup>00</sup> до 18<sup>00</sup>
+			p.header__time-text Выходной: понедельник
+		.header__phone-block
+			p.header__phone(onclick="window.location.href='tel:+380938818299';")
+				span.header__prefix +38 093 
+				| 881-82-99
+			p.header__phone.hide(onclick="window.location.href='tel:+380938818299';")
+				span.header__prefix +38 093 
+				| 881-82-99
+			p.header__phone.hide(onclick="window.location.href='tel:+380938818299';")
+				span.header__prefix +38 093 
+				| 881-82-99
+			p.header__phone-text И еще 
+				a.header__phone-link(href="#") 3 телефона
+			span.header__phone-image
+		p.header__attention Внимание! 1 и 2 мая – выходные дни
+				
