@@ -7,4 +7,11 @@ $(document).ready(function(){
 		$(this).parent().parent().find('.hide').slideDown(500);
 	});
 
+	// выпадающее меню
+	$('.menu__item').hover(function(){
+		$(this).children('ul').slideToggle(100);
+	});
+
+	// 
+
 });

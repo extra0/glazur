@@ -1,6 +1,6 @@
 .header {
-	.container-fluid {
-		max-height: 202px;
+	> .container-fluid {
+		min-height: 202px;
 	}
 	// блок вверху хедера
 	&__top {
@@ -45,6 +45,9 @@
 		display: inline-block;
 		margin: 16px 0 0 7.9%;
 		vertical-align: top;
+		&._min {
+			margin: 16px 0 0 1.9%;
+		}
 	}
 	&__time-text {
 		font-style: italic;
@@ -65,7 +68,10 @@
 			width: 40px;
 			height: 50px;
 			top: 0;
-			left: -50px;
+			left: -45px;
+		}
+		&._min {
+			margin: 10px 0 0 7%;
 		}
 	}
 	&__phone {
@@ -98,6 +104,45 @@
 		width: 135px;
 		height: 20px;
 		background: url(../img/main_sprite.png) 0px -75px no-repeat;
+	}
+	// текст под лого
+	&__attention {
+		background: #fff9d5;
+		border-radius: 5px;
+		padding: 5px 10px;
+		display: inline-block;
+		margin: -21px 0 0 5px;
+		vertical-align: top;
+	}
+	// блок желаний в хедере
+	&__wishes-block {
+		vertical-align: top;
+		margin: 11px 0 0 7%;
+		position: relative;
+		display: inline-block;
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) -411px -467px no-repeat;
+			width: 45px;
+			height: 44px;
+			top: 7px;
+			left: -50px;
+		}
+	}
+	&__wishes-title {
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	&__wishes-link {
+		display: inline-block;
+		line-height: 16px;
+		border-bottom: 1px solid;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
 	}
 
 }
@@ -161,7 +206,7 @@
 		}
 	}
 	&__text {
-		margin: 0 44px 0 0;
+		margin: 0;
 		font-style: italic;
 		color: #424242;
 		display: inline-block;
@@ -176,14 +221,35 @@
 		&:hover {
 			border-bottom: 1px solid transparent;
 		}
-		&.enter:before {
+		&:before {
 			position: absolute;
 			content: '';
-			background: url(../img/main_sprite.png) -204px -1px no-repeat;
+			background: url(../img/main_sprite.png) 0 0 no-repeat;
 			width: 9px;
 			height: 16px;
 			top: 3px;
 			left: -12px;
+		}
+		&.enter {
+			margin-left: 44px;
+			&:before {
+				background-position: -204px -1px;
+			}
+		}
+		&.profile {
+			margin-left: 33px;
+			border-bottom: 1px solid #5d83e3;
+			&:before {
+				background-position: -204px -1px;
+			}
+		}
+		&.exit {
+			margin: 0 -30px 0 30px;
+			&:before {
+				background-position: -228px 1px;
+				width: 12px;
+				left: -14px;
+			}
 		}
 	}
 }
@@ -205,5 +271,107 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		margin: -20px 0 0 0;
+	}
+}
+
+// главное меню
+.menu {
+	background: #eceae1;
+	> .container-fluid {
+		background: #eceae1;
+	}
+	&__list {
+		margin: 0;
+	}
+	&__item {
+		position: relative;
+		margin-left: -4px;
+		&:hover {
+			background: #fcfcf8;
+		}
+	}
+	&__link {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		color: #350a35;
+		padding: 34px 18px;
+		display: block;
+		-webkit-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		&:hover {
+			color: #5f065e;
+			background: #fcfcf8;
+		}
+	}
+	&__search-form {
+		float: right;
+		margin: 24px 0 0 0;
+		position: relative;
+	}
+	&__input {
+		padding: 12px 30px 12px 20px;
+		box-sizing: border-box!important;
+		border: 1px solid #999;
+		background: #fff;
+		border-radius: 15px;
+		font-size: 12px;
+		color: #999999;
+		font-weight: bold;
+		letter-spacing: 1px;
+		outline: none;
+		text-transform: uppercase;
+	}
+	&__button {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		background: url(../img/main_sprite.png) -260px -3px no-repeat;
+		display: block;
+		border: none;
+		width: 18px;
+		height: 18px;
+	}
+}
+
+// выпадающее меню
+.dropdown-menu {
+	&__list {
+		display: none;
+		position: absolute;
+		z-index: 200;
+		top: 92px;
+		left: 0;
+		box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.25);
+		background: #f8f8f4;
+		padding: 20px 32px 40px 32px !important;
+	}
+	&__item {
+		vertical-align: top;
+		padding-right: 5%;
+		display: table-cell!important;
+	}
+	&__item-title {
+		color: #932992;
+		font-weight: 800;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	&__item-link {
+		display: block;
+		text-transform: uppercase;
+		color: #999;
+		-webkit-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		font-weight: 600;
+		width: 269px;
+		margin-bottom: 11px;
+		&:hover {
+			color: #932992;
+		}
 	}
 }
