@@ -1,3 +1,14 @@
 footer.footer
 	.container-fluid
+		.intresting__section
+			p.intresting__title Кое-что интересное:
+			.intresting__block
+				a.intresting__changer(href="#")
+				.intresting__inner
+					//- img.intresting__image(src="img/", alt="")
+					p.intresting__text быстрая доставка товаров по всей Украине
+		ul.univ__list.list-inline
+			each item in univ_menu
+				li.univ__item: a.univ__link(href="#") #{item}
+		.yashare-auto-init(data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki" data-yashareTheme="counter")
 include _script

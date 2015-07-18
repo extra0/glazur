@@ -338,10 +338,27 @@
 
 // выпадающее меню
 .dropdown-menu {
-	&__list {
+	&__wrap {
 		display: none;
 		position: absolute;
 		z-index: 200;
+	}
+	&__list {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
 		top: 92px;
 		left: 0;
 		box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.25);
@@ -349,9 +366,16 @@
 		padding: 20px 32px 40px 32px !important;
 	}
 	&__item {
+		-webkit-order: 0;
+		-ms-flex-order: 0;
+		order: 0;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		-webkit-align-self: flex-start;
+		-ms-flex-item-align: start;
+		align-self: flex-start;
 		vertical-align: top;
-		padding-right: 5%;
-		display: table-cell!important;
 	}
 	&__item-title {
 		color: #932992;

@@ -1,3 +1,290 @@
 extends _layout
 block content
-	
+	.content
+		.container-fluid
+			.advantages__block
+				ul.advantages__list
+					li.advantages__item
+						.advantages__image-wrap
+							img.advantages__image(src="/img/adv_1.png", alt="")
+						h3.advantages__title Доставка по всей Украине
+						p.advantages__text возможность бесплатной доставки
+					li.advantages__item
+						.advantages__image-wrap
+							img.advantages__image(src="/img/adv_2.png", alt="")
+						h3.advantages__title Отсутствие предоплаты
+						p.advantages__text оплата наличными в момент доставки
+					li.advantages__item
+						.advantages__image-wrap
+							img.advantages__image(src="/img/adv_3.png", alt="")
+						h3.advantages__title Магазин в Одессе
+						p.advantages__text возможность примерки и самовывоза
+					li.advantages__item
+						.advantages__image-wrap
+							img.advantages__image(src="/img/adv_4.png", alt="")
+						h3.advantages__title Возврат/обмен в течении 14 дней
+						p.advantages__text полное возмещение стоимости товара
+			.slider__block
+				ul.slider__wrap
+					li.slider__item
+						a.slider__link(href="#")
+							img.slider__image(src="/img/content/slide_img.jpg", alt="")
+					li.slider__item
+						a.slider__link(href="#")
+							img.slider__image(src="/img/content/slide_img.jpg", alt="")
+					li.slider__item
+						a.slider__link(href="#")
+							img.slider__image(src="/img/content/slide_img.jpg", alt="")
+			.goods__section
+				.goods__title-wrap
+					h2.goods__title Рекомендованные товары
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__bestseller
+					a.goods__item-link(href="#")
+						img.goods__bestseller-image(src="img/content/main_goods.jpg", alt="")
+						img.goods__bestseller-image._not-active(src="/img/content/main_goods_2.jpg", alt="")
+					.goods__bestseller-footer
+						p.goods__bestseller-info._delivery Доставка 2-3 недели
+						a.goods__bestseller-link(href="#") Куртка boss
+						p.goods__bestseller-price 3 660 
+							span.goods__bestseller-currency грн
+						a.goods__bestseller-button._cart(href="#")
+						a.goods__bestseller-button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.text-center
+					button.button._see-more(type="button") Показать еще
+			.goods__section
+				a.goods__see-all-link(href="#") Смотреть все новинки
+				.goods__title-wrap
+					h2.goods__title Новинки
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="/img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+			.goods__section
+				a.goods__see-all-link(href="#") Смотреть все бренды
+				.goods__title-wrap
+					h2.goods__title Бренды
+				.goods__list-wrap
+					ul.goods__list
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand.jpg", alt="")
+						li.goods__list-item
+							a.goods__list-link(href="#")
+								img.goods__list-image(src="img/content/brand_2.jpg", alt="")
+			.description__block
+				h1.description__title Модная одежда и обувь от интернет-магазина
+				p.description__text
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+				p.description__text
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
