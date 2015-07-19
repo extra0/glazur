@@ -2,9 +2,16 @@ header.header
 	.container-fluid
 		.header__top
 			.cart__block
-				span.cart__image
+				.cart__image
+					.cart__info
+						p.cart__num-item 3
+						p.cart__text._strong товара
+						p.cart__text на сумму
+						p.cart__price 10 546 
+							span.cart__text грн.
 				p.cart__title Корзина
 				span.cart__empty пока пуста :(
+				a.button._cart(href="#") Оформить
 			ul.univ__list.list-inline
 				each item in univ_menu
 					li.univ__item: a.univ__link(href="#") #{item}
@@ -42,7 +49,7 @@ header.header
 								.modal__footer
 									button.button._submit(type="submit") зарегистрироваться
 		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+			img(src="/img/logo.png" alt="Site Logo")
 		.header__location
 			a.header__location-link(href="#")
 				span.header__line Одесса, “Сити 25”, бутик №337
@@ -76,7 +83,7 @@ header.header
 					.smart-search__item
 						a.smart-search__link(href="#")
 							.smart-search__image-wrap
-								img.smart-search__image(src="img/content/smart_thumbs.jpg", alt="")
+								img.smart-search__image(src="/img/content/smart_thumbs.jpg", alt="")
 							.smart-search__info-wrap
 								p.smart-search__title сникерсы puma super
 								p.smart-search__price 1890
@@ -85,7 +92,7 @@ header.header
 					.smart-search__item
 						a.smart-search__link(href="#")
 							.smart-search__image-wrap
-								img.smart-search__image(src="img/content/smart_thumbs_2.jpg", alt="")
+								img.smart-search__image(src="/img/content/smart_thumbs_2.jpg", alt="")
 							.smart-search__info-wrap
 								p.smart-search__title сникерсы puma super
 								p.smart-search__price 1890
@@ -94,7 +101,7 @@ header.header
 					.smart-search__item
 						a.smart-search__link(href="#")
 							.smart-search__image-wrap
-								img.smart-search__image(src="img/content/smart_thumbs.jpg", alt="")
+								img.smart-search__image(src="/img/content/smart_thumbs.jpg", alt="")
 							.smart-search__info-wrap
 								p.smart-search__title сникерсы puma super
 								p.smart-search__price 1890
@@ -103,7 +110,7 @@ header.header
 					.smart-search__item
 						a.smart-search__link(href="#")
 							.smart-search__image-wrap
-								img.smart-search__image(src="img/content/smart_thumbs_2.jpg", alt="")
+								img.smart-search__image(src="/img/content/smart_thumbs_2.jpg", alt="")
 							.smart-search__info-wrap
 								p.smart-search__title zara кеды leather good best keds color reen
 								p.smart-search__price 1890

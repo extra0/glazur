@@ -274,15 +274,62 @@
 	}
 	&__image {
 		display: block;
+		position: relative;
 		width: 119px;
 		height: 117px;
 		background: url(../img/main_sprite.png) -177px -87px no-repeat;
+		& > div {
+			opacity: 0;
+		}
+		&._full  {
+			&:before {
+				position: absolute;
+				content: '';
+				background: url(../img/main_sprite.png) -281px -312px no-repeat;
+				width: 105px;
+				height: 100px;
+				top: 0px;
+				left: 0px;
+			}
+			& > div {
+				opacity: 1;
+			}
+		}
 	}
 	&__title {
 		font-weight: bold;
 		font-size: 20px;
 		text-transform: uppercase;
 		margin: -20px 0 0 0;
+	}
+	&__info {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		width: 105px;
+		height: 100px;
+		overflow: hidden;
+		text-align: center;
+	}
+	&__num-item {
+		margin: 0;
+		font-weight: 800;
+		color: #932992;
+	}
+	&__text {
+		font-size: 10px;
+		margin: 0;
+		color: #000;
+		&._strong {
+			text-transform: uppercase;
+			font-weight: 800;
+			margin: 3px 0;
+		}
+	}
+	&__price {
+		color: #932992;
+		font-weight: bold;
+		margin: 0;
 	}
 }
 
