@@ -73,7 +73,7 @@ $(document).ready(function() {
 		}, 1000)
 		setTimeout(function() {
 			$('.cart__info').addClass('_full');
-		}, 1500)
+		}, 1200)
 		$(this).children('img')
 			.clone()
 			.css({

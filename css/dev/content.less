@@ -400,3 +400,136 @@
 		display: inline-block;
 	}
 }
+
+// страница контактов
+.page {
+	&__title {
+		margin: 0 0 48px 0;
+		font-size: 30px;
+		font-weight: normal;
+	}
+	&__img {
+		width: 100%;
+		margin-bottom: 54px;
+	}
+}
+.contacts {
+	&__map {
+		display: inline-block;
+		width: 50%;
+		height: 500px;
+		float: right;
+		vertical-align: top;
+	}
+	&__info {
+		display: inline-block;
+		width: 40%;
+		margin-bottom: 50px;
+	}
+	&__location {
+		position: relative;
+		padding-left: 60px;
+		margin-bottom: 40px;
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) 0 0 no-repeat;
+			width: 30px;
+			height: 40px;
+			top: 28px;
+			left: 11px;
+		}
+	}
+	&__town {
+		margin: 0;
+	}
+	&__address {
+		font-size: 18px;
+		line-height: 30px;
+		margin: 6px 0 0 0;
+		width: 85%;
+	}
+	&__time {
+		width: 68%;
+		margin-bottom: 40px;
+		background: #fff9d5;
+		border-radius: 7px;
+		position: relative;
+		padding: 10px 0 10px 60px;
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) -345px -95px no-repeat;
+			width: 52px;
+			height: 40px;
+			top: 7px;
+			left: 10px;
+		}
+	}
+	&__time-text {
+		margin: 0;
+		&._sizeL-ital {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 18px;
+			margin: 10px 0;
+		}
+		&._ital {
+			font-style: italic;
+			font-weight: normal;
+		}
+		sup {
+			text-decoration: underline;
+			font-size: 11px;
+		}
+	}
+	&__phones-block {
+		position: relative;
+		padding-left: 60px;
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) -53px 0 no-repeat;
+			width: 40px;
+			height: 50px;
+			top: 0px;
+			left: 14px;
+		}
+	}
+	&__phones {
+		font-size: 30px;
+		font-weight: bold;
+		margin:  0 0 15px 0;
+	}
+	&__operator {
+		background: url(../img/main_sprite.png) 0 0 no-repeat;
+		width: 140px;
+		height: 30px;
+		position: relative;
+		display: inline-block;
+		top: 3px;
+		&._life {
+			background-position: -301px -156px;
+		}
+		&._mts {
+			background-position: -301px -199px;
+		}
+		&._kiyv {
+			background-position: -307px -237px;
+		}
+	}
+	&__prefix {
+		color: #737373;
+	}
+	&__email {
+		display: inline-block;
+		line-height: 24px;
+		font-size: 20px;
+		font-weight: bold;
+		margin: 27px 0 0 0;
+		border-bottom: 1px solid;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
