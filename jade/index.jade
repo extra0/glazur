@@ -40,6 +40,10 @@ block content
 					h2.goods__title Рекомендованные товары
 				.goods__item
 					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
 						img.goods__image(src="/img/content/goods.jpg", alt="")
 						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
 					.goods__footer
@@ -51,6 +55,9 @@ block content
 						a.goods__button._favorite(href="#")
 				.goods__item
 					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._new
 						img.goods__image(src="/img/content/goods_2.jpg", alt="")
 						img.goods__image._not-active(src="/img/content/goods.jpg", alt="")
 					.goods__footer
@@ -62,6 +69,9 @@ block content
 						a.goods__button._favorite(href="#")
 				.goods__item
 					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._sale
+							p.goods__condition._new
 						img.goods__image(src="/img/content/goods.jpg", alt="")
 						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
 					.goods__footer
@@ -95,6 +105,8 @@ block content
 						a.goods__bestseller-button._favorite(href="#")
 				.goods__item
 					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
 						img.goods__image(src="/img/content/goods.jpg", alt="")
 						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
 					.goods__footer
@@ -236,7 +248,7 @@ block content
 				.goods__title-wrap
 					h2.goods__title Бренды
 				.goods__list-wrap
-					ul.goods__list
+					ul.goods__list.list-inline
 						li.goods__list-item
 							a.goods__list-link(href="#")
 								img.goods__list-image(src="img/content/brand.jpg", alt="")

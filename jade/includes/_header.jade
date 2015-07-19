@@ -9,10 +9,38 @@ header.header
 				each item in univ_menu
 					li.univ__item: a.univ__link(href="#") #{item}
 			.enter__block
-				p.enter__text Привет, Катя!
+				p.enter__text._login Привет, Катя!
 				// <a href="#" class="enter__link enter fancy">Вход</a>
 				a.enter__link.profile(href="#") Профиль
 				a.enter__link.exit(href="#") Выйти
+				.modal__window
+					.modal__block#tabs
+						ul.modal__list.list-inline
+							li.modal__item
+								a.modal__tab-link(href="#enter") Вход
+							li.modal__item
+								a.modal__tab-link(href="#registration") регистрация
+						#enter
+							form.modal__form(action="#")
+								input.modal__input(type="email" placeholder="Електронная почта" required)
+								input.modal__input(type="password" placeholder="пароль" required)
+								label.modal__label 
+									input.modal__input.checkbox(type="checkbox")
+									| Запомнить меня
+								a.modal__link(href="#") Напомнить пароль
+								.modal__footer
+									button.button._submit(type="submit") Войти
+						#registration
+							form.modal__form(action="#")
+								input.modal__input(type="text" placeholder="Имя и Фамилия" required)
+								input.modal__input(type="email" placeholder="Електронная почта" required)
+								input.modal__input(type="password" placeholder="пароль" required)
+								input.modal__input.mask(type="tel" placeholder="телефон" required)
+								input.modal__input(type="text" placeholder="город" required)
+								p.modal__text Регистрируясь, вы соглашаетесь с 
+									a.modal__link._b-solid(href="#") пользовательским соглашением
+								.modal__footer
+									button.button._submit(type="submit") зарегистрироваться
 		a.header__logo(href="/")
 			img(src="img/logo.png" alt="Site Logo")
 		.header__location
@@ -25,12 +53,12 @@ header.header
 			p.header__phone(onclick="window.location.href='tel:+380938818299';")
 				span.header__prefix +38 093 
 				| 881-82-99
-			p.header__phone.hide(onclick="window.location.href='tel:+380938818299';")
-				span.header__prefix +38 093 
-				| 881-82-99
-			p.header__phone.hide(onclick="window.location.href='tel:+380938818299';")
-				span.header__prefix +38 093 
-				| 881-82-99
+			p.header__phone.hide(onclick="window.location.href='tel:+380500535302';")
+				span.header__prefix +38 050 
+				| 053-53-02
+			p.header__phone.hide(onclick="window.location.href='tel:+380960470318';")
+				span.header__prefix +38 096 
+				| 047-03-18
 			p.header__phone-text И еще 
 				a.header__phone-link(href="#") 2 телефона
 			span.header__phone-image
@@ -40,126 +68,182 @@ header.header
 		p.header__attention Внимание! 1 и 2 мая – выходные дни
 	.menu
 		.container-fluid
-			form.menu__search-form(action="#")
-				input.menu__input(type="search" placeholder="поиск" required)
-				button.menu__button(type="submit")
+			.smart-search__section
+				form.smart-search__form(action="#")
+					input.smart-search__input(type="search" placeholder="поиск" required)
+					button.smart-search__button(type="submit")
+				.smart-search__block
+					.smart-search__item
+						a.smart-search__link(href="#")
+							.smart-search__image-wrap
+								img.smart-search__image(src="img/content/smart_thumbs.jpg", alt="")
+							.smart-search__info-wrap
+								p.smart-search__title сникерсы puma super
+								p.smart-search__price 1890
+									span.smart-search__currency грн.
+							.clear
+					.smart-search__item
+						a.smart-search__link(href="#")
+							.smart-search__image-wrap
+								img.smart-search__image(src="img/content/smart_thumbs_2.jpg", alt="")
+							.smart-search__info-wrap
+								p.smart-search__title сникерсы puma super
+								p.smart-search__price 1890
+									span.smart-search__currency грн.
+							.clear
+					.smart-search__item
+						a.smart-search__link(href="#")
+							.smart-search__image-wrap
+								img.smart-search__image(src="img/content/smart_thumbs.jpg", alt="")
+							.smart-search__info-wrap
+								p.smart-search__title сникерсы puma super
+								p.smart-search__price 1890
+									span.smart-search__currency грн.
+							.clear
+					.smart-search__item
+						a.smart-search__link(href="#")
+							.smart-search__image-wrap
+								img.smart-search__image(src="img/content/smart_thumbs_2.jpg", alt="")
+							.smart-search__info-wrap
+								p.smart-search__title zara кеды leather good best keds color reen
+								p.smart-search__price 1890
+									span.smart-search__currency грн.
+							.clear
+					.text-center
+						a.smart-search__all-result(href="#") Все результаты поиска →
 			ul.menu__list.list-inline
 				li.menu__item
 					a.menu__link(href="#") Женщинам
-					.dropdown-menu__wrap
-						ul.dropdown-menu__list.list-inline
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Одежда
-								a.dropdown-menu__item-link(href="#") Эксклюзивная коллекция
-								a.dropdown-menu__item-link(href="#") Юбки, Платья, Сарафаны
-								a.dropdown-menu__item-link(href="#") Футболки и Рубашки
-								a.dropdown-menu__item-link(href="#") Джинсы и Шорты
-								a.dropdown-menu__item-link(href="#") Верхняя одежда
-								a.dropdown-menu__item-link(href="#") Свитера и Кофты
-								a.dropdown-menu__item-link(href="#") Спортивные костюмы
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Обувь
-								a.dropdown-menu__item-link(href="#") Кеды, кроссовки
-								a.dropdown-menu__item-link(href="#") туфли
-								a.dropdown-menu__item-link(href="#") мокасины
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") сандали, шлепанцы
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Аксессуары
-								a.dropdown-menu__item-link(href="#") Кеды, кроссовки
-								a.dropdown-menu__item-link(href="#") туфли
-								a.dropdown-menu__item-link(href="#") мокасины
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") сандали, шлепанцы
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Аксессуары
-								a.dropdown-menu__item-link(href="#") Кеды, кроссовки
-								a.dropdown-menu__item-link(href="#") туфли
-								a.dropdown-menu__item-link(href="#") мокасины
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") сандали, шлепанцы
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Аксессуары
-								a.dropdown-menu__item-link(href="#") Кеды, кроссовки
-								a.dropdown-menu__item-link(href="#") туфли
-								a.dropdown-menu__item-link(href="#") мокасины
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") сандали, шлепанцы
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Аксессуары
-								a.dropdown-menu__item-link(href="#") Кеды, кроссовки
-								a.dropdown-menu__item-link(href="#") туфли
-								a.dropdown-menu__item-link(href="#") мокасины
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") сандали, шлепанцы
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
-								a.dropdown-menu__item-link(href="#") UGG, валенки
+					ul.dropdown-menu__list.list-inline
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Одежда
+							a.dropdown-menu__item-link(href="#") Эксклюзивная коллекция
+							a.dropdown-menu__item-link(href="#") Юбки, Платья, Сарафаны
+							a.dropdown-menu__item-link(href="#") Футболки и Рубашки
+							a.dropdown-menu__item-link(href="#") Джинсы и Шорты
+							a.dropdown-menu__item-link(href="#") Верхняя одежда
+							a.dropdown-menu__item-link(href="#") Свитера и Кофты
+							a.dropdown-menu__item-link(href="#") Спортивные костюмы
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Обувь
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Аксессуары
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Аксессуары
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Аксессуары
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Аксессуары
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+							a.dropdown-menu__item-link(href="#") UGG, валенки
 				li.menu__item
 					a.menu__link(href="#") Мужчинам
-					.dropdown-menu__wrap
-						ul.dropdown-menu__list.list-inline
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Одежда
-								a.dropdown-menu__item-link(href="#") Эксклюзивная коллекция
-								a.dropdown-menu__item-link(href="#") Юбки, Платья, Сарафаны
-								a.dropdown-menu__item-link(href="#") Футболки и Рубашки
-								a.dropdown-menu__item-link(href="#") Джинсы и Шорты
-								a.dropdown-menu__item-link(href="#") Верхняя одежда
-								a.dropdown-menu__item-link(href="#") Свитера и Кофты
-								a.dropdown-menu__item-link(href="#") Спортивные костюмы
-							li.dropdown-menu__item
-								p.dropdown-menu__item-title Обувь
-								a.dropdown-menu__item-link(href="#") Кеды, кроссовки
-								a.dropdown-menu__item-link(href="#") туфли
-								a.dropdown-menu__item-link(href="#") мокасины
-								a.dropdown-menu__item-link(href="#") эспадрильи
-								a.dropdown-menu__item-link(href="#") сандали, шлепанцы
-								a.dropdown-menu__item-link(href="#") Ботинки, сапоги
-								a.dropdown-menu__item-link(href="#") UGG, валенки
+					ul.dropdown-menu__list.list-inline
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Одежда
+							a.dropdown-menu__item-link(href="#") Эксклюзивная коллекция
+							a.dropdown-menu__item-link(href="#") Юбки, Платья, Сарафаны
+							a.dropdown-menu__item-link(href="#") Футболки и Рубашки
+							a.dropdown-menu__item-link(href="#") Джинсы и Шорты
+							a.dropdown-menu__item-link(href="#") Верхняя одежда
+							a.dropdown-menu__item-link(href="#") Свитера и Кофты
+							a.dropdown-menu__item-link(href="#") Спортивные костюмы
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Обувь
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Обувь
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
+						li.dropdown-menu__item
+							p.dropdown-menu__item-title Обувь
+							a.dropdown-menu__item-link(href="#") Кеды, кроссовки
+							a.dropdown-menu__item-link(href="#") туфли
+							a.dropdown-menu__item-link(href="#") мокасины
+							a.dropdown-menu__item-link(href="#") эспадрильи
+							a.dropdown-menu__item-link(href="#") сандали, шлепанцы
+							a.dropdown-menu__item-link(href="#") Ботинки, сапоги
+							a.dropdown-menu__item-link(href="#") UGG, валенки
 				li.menu__item
 					a.menu__link(href="#") Новинки
 				li.menu__item

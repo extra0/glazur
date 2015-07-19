@@ -1,14 +1,62 @@
 footer.footer
 	.container-fluid
-		.intresting__section
-			p.intresting__title Кое-что интересное:
-			.intresting__block
-				a.intresting__changer(href="#")
-				.intresting__inner
-					//- img.intresting__image(src="img/", alt="")
-					p.intresting__text быстрая доставка товаров по всей Украине
-		ul.univ__list.list-inline
-			each item in univ_menu
-				li.univ__item: a.univ__link(href="#") #{item}
-		.yashare-auto-init(data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki" data-yashareTheme="counter")
+		.footer__top
+			.intresting__section
+				p.intresting__title Кое-что интересное:
+				.intresting__block
+					a.intresting__changer(href="#")
+					.intresting__inner.active
+						img.intresting__image(src="img/int_1.png", alt="")
+						p.intresting__text быстрая доставка товаров по всей Украине
+					.intresting__inner
+						img.intresting__image(src="img/int_2.png", alt="")
+						p.intresting__text быстрая доставка Украине
+					.intresting__inner
+						img.intresting__image(src="img/int_3.png", alt="")
+						p.intresting__text быстрая товаров по всей Украине
+					.intresting__inner
+						img.intresting__image(src="img/int_4.png", alt="")
+						p.intresting__text товаров по всей Украине
+					.intresting__inner
+						img.intresting__image(src="img/int_5.png", alt="")
+						p.intresting__text быстрая доставка
+					.intresting__inner
+						img.intresting__image(src="img/int_6.png", alt="")
+						p.intresting__text быстрая доставка товаров по всей Украине
+			ul.univ__list.list-inline
+				each item in univ_menu
+					li.univ__item: a.univ__link(href="#") #{item}
+			.yashare-auto-init(data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki" data-yashareTheme="counter")
+		.footer__middle
+			.phones__block
+				p.phones__number(onclick="window.location.href='tel:+380938818299';")
+					span.phones__prefix +38 093 
+					| 881-82-99
+				p.phones__number(onclick="window.location.href='tel:+380500535302';")
+					span.phones__prefix +38 050 
+					| 053-53-02
+				p.phones__number(onclick="window.location.href='tel:+380960470318';")
+					span.phones__prefix +38 096  
+					| 047-03-18
+			.social__block
+				a.social__link(href="#")
+					img.social__image(src="img/fb.png", alt="")
+				a.social__link(href="#")
+					img.social__image(src="img/vk.png", alt="")
+				a.social__link(href="#")
+					img.social__image(src="img/tw.png", alt="")
+				a.social__link(href="#")
+					img.social__image(src="img/inst.png", alt="")
+				span.social__text Cледите за Глазурью ;)
+		.footer__bottom
+			.develop__block
+				p.develop__text Создание сайта - студия “
+					a.develop__link(href="#") Максимус
+					| ”
+			.copyright__block
+				p.copyright__text © Интернет Магазин Одежды "Глазурь™".<br>
+					span.copyright__extra-text Все права на использование торговой марки Глазурь™ защищены законом Украины
+			.footer__link-block
+				a.footer__link(href="#") Карта сайта
+				a.footer__link(href="#") Обратная связь
 include _script
