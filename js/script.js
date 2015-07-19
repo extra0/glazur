@@ -72,7 +72,7 @@ $(document).ready(function() {
 			scrollTop: 0
 		}, 1000)
 		setTimeout(function() {
-			$('.cart__image').addClass('_full');
+			$('.cart__info').addClass('_full');
 		}, 1500)
 		$(this).children('img')
 			.clone()
@@ -83,8 +83,8 @@ $(document).ready(function() {
 			.appendTo(this)
 			.animate({
 				opacity: 0.5,
-				marginTop: $('.cart__image').offset().top - $(this).children('img').offset().top,
-				marginLeft: $('.cart__image').offset().left - $(this).children('img').offset().left,
+				marginTop: $('.cart__info').offset().top - $(this).children('img').offset().top,
+				marginLeft: $('.cart__info').offset().left - $(this).children('img').offset().left,
 				width: 50,
 				height: 50
 			}, 860, function() {

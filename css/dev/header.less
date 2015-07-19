@@ -278,23 +278,6 @@
 		width: 119px;
 		height: 117px;
 		background: url(../img/main_sprite.png) -177px -87px no-repeat;
-		& > div {
-			opacity: 0;
-		}
-		&._full  {
-			&:before {
-				position: absolute;
-				content: '';
-				background: url(../img/main_sprite.png) -281px -312px no-repeat;
-				width: 105px;
-				height: 100px;
-				top: 0px;
-				left: 0px;
-			}
-			& > div {
-				opacity: 1;
-			}
-		}
 	}
 	&__title {
 		font-weight: bold;
@@ -304,12 +287,24 @@
 	}
 	&__info {
 		position: absolute;
-		top: 10px;
+		top: 0px;
 		left: 0;
 		width: 105px;
 		height: 100px;
 		overflow: hidden;
+		opacity: 0;
 		text-align: center;
+		-webkit-transition: opacity 0.4s ease;
+		-o-transition: opacity 0.4s ease;
+		-moz-transition: opacity 0.4s ease;
+		transition: opacity 0.4s ease;
+		&._full  {
+			padding-top: 10px;
+			opacity: 1;
+			background: url(../img/main_sprite.png) -281px -312px no-repeat;
+			width: 105px;
+			height: 100px;
+		}
 	}
 	&__num-item {
 		margin: 0;
