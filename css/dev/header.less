@@ -537,8 +537,14 @@
 			border-bottom: 14px solid #f4f2ed;
 			position: absolute;
 			content: '';
-			top: -14px;
+			top: -12px;
 			right: 74px;
+ 		}
+ 		&._reviews {
+ 			box-shadow: 0 0 120px #ADADAD;
+			top: 64px;
+			right: -46px;
+			left: auto;
  		}
 	}
 	&__list {
@@ -572,6 +578,7 @@
 			color: #932992;
 		}
 	}
+	&__message,
 	&__input:not(.checkbox) {
 		border: 1px solid #949492;
 		border-radius: 5px;
@@ -593,6 +600,11 @@
 		&:focus {
 			box-shadow: 0 0 4px #949492;
 		}
+	}
+	&__message {
+		padding: 14px;
+		height: 130px;
+		resize: none;
 	}
 	&__label {
 		color: #333;
@@ -629,5 +641,13 @@
 	&__text {
 		color: #333;
 		margin: 0 0 15px 0;
+	}
+	&__title {
+		color: #932992;
+		text-align: center;
+		margin: -5px 0 15px 0;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 800;
 	}
 }

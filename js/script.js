@@ -25,7 +25,7 @@ $(document).ready(function() {
 	$('.goods__item').hover(function() {
 		$(this).find(".goods__image").toggleClass("_not-active");
 	});
-
+	
 	$('.goods__bestseller').hover(function() {
 		$(this).find(".goods__bestseller-image").toggleClass("_not-active");
 	});
@@ -39,6 +39,12 @@ $(document).ready(function() {
 	$('.enter').click(function() {
 		$('body').prepend('<div class="wrap"></div>');
 		$('.modal__window').slideDown(500);
+		return false;
+	});
+
+	// открываем модальное окно отзывов
+	$('.main__link').click(function() {
+		$(this).next('div').slideToggle(500);
 		return false;
 	});
 

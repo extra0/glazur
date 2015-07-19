@@ -1,0 +1,115 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.sidebar
+				ul.breadcrumbs__list.list-inline
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						p.breadcrumbs__active Отзывы
+				ul.sidebar__menu
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Оплата и доставка
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Скидки
+					li.sidebar__menu-item
+						a.sidebar__menu-link.active(href="#") Отзывы
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Контакты
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Возврат
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Блог
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") О магазине
+				h3.sidebar__title Наш
+					img.sidebar__img(src="/img/instagram.png", alt="")
+				a.sidebar__link(href="#")
+					img.sidebar__img(src="/img/insta_box.jpg", alt="")
+				.sidebar__discount
+					a.sidebar__link(href="#")
+						img.sidebar__img(src="/img/discount.png", alt="")
+				h3.sidebar__title Рекомендуемые товары
+				.goods__item._sidebar
+					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+							img(src="/img/content/goods.jpg", alt="")
+						a.goods__button._favorite(href="#")
+				.goods__item._sidebar
+					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+							img(src="/img/content/goods.jpg", alt="")
+						a.goods__button._favorite(href="#")
+				.goods__item._sidebar
+					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
+						img.goods__image(src="/img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="/img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+							img(src="/img/content/goods.jpg", alt="")
+						a.goods__button._favorite(href="#")
+				h3.sidebar__title Свежее в блоге
+				.sidebar__blog-preview
+					a.sidebar__blog-link(href="#")
+						img.sidebar__blog-img(src="/img/content/blog_thumb.jpg", alt="")
+						p.sidebar__blog-title Модные
+						p.sidebar__blog-date 15 мая 2015
+				.sidebar__blog-preview
+					a.sidebar__blog-link(href="#")
+						img.sidebar__blog-img(src="/img/content/blog_thumb.jpg", alt="")
+						p.sidebar__blog-title Модные Женские футболки 2015 и другие аксессуары Модные Женские футболки 2015 и другие аксессуары
+						p.sidebar__blog-date 15 мая 2015
+				.sidebar__blog-preview
+					a.sidebar__blog-link(href="#")
+						img.sidebar__blog-img(src="/img/content/blog_thumb.jpg", alt="")
+						p.sidebar__blog-title Модные Женские футболки 2015 и другие аксессуары
+						p.sidebar__blog-date 15 мая 2015
+			.main__section
+				a.main__link(href="#") Оставить свой отзыв
+				.modal__window._reviews
+					p.modal__title Ваш отзыв
+					form.modal__form(action="#")
+						input.modal__input(type="text" placeholder="Ваше имя" required)
+						input.modal__input(type="email" placeholder="Електронная почта" required)
+						textarea.modal__message(placeholder="текст вашего сообщения" required)
+						.modal__footer
+							button.button._submit(type="submit") Отправить
+				h1.main__title Отзывы наших клиентов
+				.review__section
+					.review__block
+						p.review__autor Алина
+							span.review__date 15 мая 2015
+						p.review__text Сайт отличный!!! Отличное обслуживание))) Приехала в магазин 2 недели назад, все подошло) Девушка безумно милая, все подсказала, буду дальше заказывать) спас ибо Вам!!!
+			.clear
+			

@@ -88,6 +88,10 @@
 				background-image: url(../img/big_shadow_active.png);
 			}
 		}
+		&._sidebar {
+			width: 75%;
+			margin: 20px 0 43px 12.6%;
+		}
 	}
 	&__image {
 		max-height: 255px;
@@ -401,8 +405,11 @@
 	}
 }
 
-// страница контактов
-.page {
+// универсальные правила для страниц
+.main {
+	&__section {
+		position: relative;
+	}
 	&__title {
 		margin: 0 0 48px 0;
 		font-size: 30px;
@@ -411,6 +418,16 @@
 	&__img {
 		width: 100%;
 		margin-bottom: 54px;
+	}
+	&__link {
+		float: right;
+		display: inline-block;
+		border-bottom: 1px dotted;
+		font-weight: 300;
+		margin: 15px 0 0 0;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
 	}
 }
 .contacts {
@@ -579,6 +596,96 @@
 	width: 330px;
 	float: left;
 	margin-right: 35px;
+	&__menu {
+		padding: 0;
+		list-style-type: none;
+		margin-bottom: 61px;
+	}
+	&__menu-item {
+		margin-bottom: 27px
+	}
+	&__menu-link {
+		text-transform:uppercase;
+		color: #979797;
+		font-weight: bold;
+		font-size: 18px;
+		-webkit-transition: color 0.4s ease;
+		-o-transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		transition: color 0.4s ease;
+		position: relative;
+		&:hover {
+			color: #932992;
+		}
+		&.active {
+			color: #932992;
+			display: inline-block;
+			border-top: 2px solid #B445A3;
+			border-left: 2px solid #B445A3;
+			border-bottom: 2px solid #B445A3;
+			border-radius: 7px 0 0 7px;
+			margin-left: -20px;
+			line-height: 58px;
+			padding: 0px 55px 0px 20px;
+			cursor: default;
+			&:before {
+				position: absolute;
+				content: '';
+				background: url(../img/main_sprite.png) -396px -9px no-repeat;
+				width: 38px;
+				height: 62px;
+				top: -2px;
+				right: -37px;
+			}
+		}
+	}
+	&__title {
+		line-height: 37px;
+		font-size: 30px;
+		margin: 0 0 24px 5px;
+		vertical-align: top;
+		img {
+			margin: 5px 0 0 15px;
+		}
+	}
+	&__discount {
+		margin: 60px 0;
+	}
+	&__blog-preview {
+		margin-bottom: 15px;
+		clear: both;
+	}
+	&__blog-link {
+		&:hover {
+			.sidebar__blog-title {
+				color: #932992;
+			}
+		}
+	}
+	&__blog-img {
+		width: 100px;
+		height: 100px;
+		border-radius: 5px;
+		float: left;
+		margin-bottom: 15px;
+		box-shadow: 0px 0px 2px #000;
+	}
+	&__blog-title {
+		color: #3262db;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 24px;
+		margin: 0px 0 10px 126px;
+		-webkit-transition: color 0.4s ease;
+		-o-transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		transition: color 0.4s ease;
+	}
+	&__blog-date {
+		color: #8b8b8b;
+		margin: 0 0 0 126px;
+	}
 }
 
 // карта сайта ссылки
