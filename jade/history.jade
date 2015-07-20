@@ -21,6 +21,61 @@ block content
 						a.sidebar__menu-link(href="#") смена пароля
 			.main__section
 				h1.main__title История заказов
-				
+				.order__block
+					table.order__table
+						thead.order__table-head
+							tr.order__line
+								td.order__cell
+									p.order__head-text Заказ №:
+										span.order__number 375985
+								td.order__cell(colspan="2")
+									p.order__date 15 мая 2015
+								td.order__cell._text-r(colspan="2")
+									p.order__head-text Статус:
+										span.order__status Оплачен
+						tbody.order__table-body
+							tr.order__line
+								th.order__table-title Товар
+								th.order__table-title Цвет
+								th.order__table-title._text-c Размер
+								th.order__table-title._text-c Количество
+								th.order__table-title Стоимость
+							tr.order__line
+								td.order__cell
+									a.order__link(href="#")
+										img.order__img(src="img/content/order_thumb.jpg", alt="")
+										p.order__title zara кеды leather good best keds color green
+									span.order__option Без коробки
+								td.order__cell
+									p.order__color._green
+								td.order__cell._text-c
+									p.order__size 39
+								td.order__cell._text-c
+									p.order__quantity 2
+								td.order__cell
+									p.order__price 890 
+										span.order__currency грн.
+							tr.order__line
+								td.order__cell
+									a.order__link(href="#")
+										img.order__img(src="img/content/order_thumb.jpg", alt="")
+										p.order__title zara кеды leather good best keds color green
+									span.order__option Без коробки
+								td.order__cell
+									p.order__color._red
+								td.order__cell._text-c
+									p.order__size 39
+								td.order__cell._text-c
+									p.order__quantity 2
+								td.order__cell
+									p.order__price 1 890 
+										span.order__currency грн.
+						tfoot.order__table-footer
+							tr.order__line
+								td.order__cell._text-r(colspan="4")
+									span.order__total-text Общая сумма заказа:
+								td.order__cell
+									p.order__price 1 890 
+										span.order__currency грн.
 			.clear
 			

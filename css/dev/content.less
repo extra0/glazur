@@ -916,3 +916,124 @@
 		font-weight: normal;
 	}
 }
+
+// блок с историей заказов
+.order {
+	&__block {
+		background: #f9f9f6;
+		border-radius: 15px;
+		padding: 20px;
+	}
+	&__table {
+		width: 100%;
+	}
+	&__cell {
+		padding: 0;
+		&._text-r { text-align: right;}
+		&._text-c {	text-align: center;}
+		&:first-child {	width: 38%;}
+		&:last-child {	width: 19%;}
+	}
+	&__head-text {
+		font-style: italic;
+		font-size: 16px;
+		color: #333;
+	}
+	&__status {
+		color: #932992;
+		font-weight: bold;
+		font-size: 20px;
+		display: inline-block;
+		margin-left: 10px;
+		font-style: normal;
+		&._not-pay {
+			color: #999;
+		}
+	}
+	&__number {
+		font-style: normal;
+		font-weight: bold;
+		color: #000;
+		font-size: 20px;
+		display: inline-block;
+		margin-left: 20px;
+	}
+	&__date {
+		color: #8c8c8c;
+		margin-left: 24px;
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) -474px -48px no-repeat;
+			width: 17px;
+			height: 17px;
+			top: 0;
+			left: -25px;
+		}
+	}
+	&__table-title {
+		text-align: left;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 10px 0;
+		color: #333;
+		&._text-r { text-align: right;}
+		&._text-c {	text-align: center;}
+	}
+	&__table-body {
+		.order__line { border-bottom: 1px solid #dddedf;}
+	}
+	&__link {
+		&:hover {
+			.order__title { color: #932992;}
+		}
+	}
+	&__title {
+		vertical-align: top;
+		display: block;
+		color: #3262db;
+		font-weight: bold;
+		margin: 10px 0 6px 100px;
+		line-height: 22px;
+		text-transform: uppercase;
+	}
+	&__option {
+		color: #666;
+		font-weight: 300;
+		display: block;
+		margin-left: 100px;
+	}
+	&__img {
+		border-radius: 10px;
+		border: 1px solid #9d9d9d;
+		max-width: 88px;
+		max-height: 88px;
+		float: left;
+	}
+	&__color {
+		width: 31px;
+		height: 31px;
+		border-radius: 5px;
+		&._green {background: #00a651;}
+		&._red {background: #e30613;}
+	}
+	&__size,
+	&__quantity {
+		font-size: 16px;
+	}
+	&__price {
+		font-size: 36px;
+		font-weight: bold;
+	}
+	&__currency {
+		font-size: 20px;
+		font-weight: normal;
+	}
+	&__total-text {
+		font-size: 16px;
+		margin: 14px 30px 0 0;
+		display: block;
+		font-weight: bold;
+	}
+}
