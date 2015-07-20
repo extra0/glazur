@@ -105,15 +105,7 @@
 		height: 20px;
 		background: url(../img/main_sprite.png) 0px -75px no-repeat;
 	}
-	/* текст под лого */
-	&__attention {
-		background: #fff9d5;
-		border-radius: 5px;
-		padding: 5px 10px;
-		display: inline-block;
-		margin: -21px 0 0 5px;
-		vertical-align: top;
-	}
+
 	/* блок желаний в хедере */
 	&__wishes-block {
 		vertical-align: top;
@@ -170,6 +162,18 @@
 			border-bottom: 1px solid transparent;
 			color: lighten(#000, 10%);
 		}
+	}
+}
+
+/* выделенный текст */
+.attention {
+	background: #fff9d5;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: inline-block;
+	vertical-align: top;
+	&._header {
+		margin: -21px 0 0 5px;
 	}
 }
 

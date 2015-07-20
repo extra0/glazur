@@ -1,0 +1,29 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.sidebar
+				ul.breadcrumbs__list.list-inline
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						p.breadcrumbs__active Личный кабинет
+				ul.sidebar__menu
+					li.sidebar__menu-item
+						a.sidebar__menu-link.active(href="#") Личный счет
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") история заказов
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") данные профиля
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") желания
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") смена пароля
+			.main__section
+				h1.main__title Личный счет
+				p.bill__text На вашем лицем счету:
+				p.bill__cash 750 
+					span.bill__currency грн.
+				p.attention спишется при следующей покупке
+			.clear
+			

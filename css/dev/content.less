@@ -411,6 +411,7 @@
 		position: relative;
 		margin-left: 365px;
 		margin-bottom: 115px;
+		min-height: 600px;
 	}
 	&__title {
 		margin: 0 0 48px 0;
@@ -606,7 +607,7 @@
 		margin-bottom: 61px;
 	}
 	&__menu-item {
-		margin-bottom: 27px
+		margin-bottom: 31px
 	}
 	&__menu-link {
 		text-transform:uppercase;
@@ -620,9 +621,9 @@
 		&.active {
 			color: #932992;
 			display: inline-block;
-			border-top: 3px solid #B445A3;
-			border-left: 3px solid #B445A3;
-			border-bottom: 3px solid #B445A3;
+			border-top: 2px solid #B445A3;
+			border-left: 2px solid #B445A3;
+			border-bottom: 2px solid #B445A3;
 			border-radius: 7px 0 0 7px;
 			margin-left: -20px;
 			line-height: 58px;
@@ -833,5 +834,85 @@
 		&:hover {
 			color: #000;
 		}
+	}
+}
+
+//  страница блога
+.blog {
+	&__list {
+		padding: 0;
+		display: inline-block;
+		list-style-type: none;
+		text-align: center;
+		width: 26%;
+		float: left;
+		margin: 0;
+		&:nth-child(3) {
+			margin: 0 11%; 
+		}
+	}
+	&__item {
+		text-align: left;
+		background: url(../img/shadow.png) bottom center no-repeat;
+		padding-bottom: 42px;
+		vertical-align: top;
+		margin-bottom: 40px;
+		-webkit-transition: background 0.4s ease;
+		-o-transition: background 0.4s ease;
+		-moz-transition: background 0.4s ease;
+		transition: background 0.4s ease;
+		&:hover {
+			background: url(../img/shadow_active.png) bottom center no-repeat;
+		}
+	}
+	&__image {
+		border-radius: 10px;
+		max-width: 230px;
+		max-height: 230px;
+		display: block;
+		margin: auto;
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #3262db;
+		margin: 15px 0 10px 0;
+		line-height: 24px;
+	}
+	&__date {
+		color: #8b8b8b;
+		margin: 0;
+	}
+	&__text {
+		margin: 10px 0;
+		line-height: 24px;
+	}
+	&__link {
+		&:hover {
+			.blog__title {
+				color: #932992;
+			}
+		}
+	}
+}
+
+// блок счета в личном кабинете
+.bill {
+	&__text {
+		color: #333;
+		font-size: 16px;
+	}
+	&__cash {
+		font-size: 36px;
+		font-weight: bold;
+		color: #333;
+		margin: 0 21px 0 0;
+		vertical-align: top;
+		display: inline-block;
+	}
+	&__currency {
+		font-size: 24px;
+		font-weight: normal;
 	}
 }

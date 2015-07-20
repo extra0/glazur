@@ -1,0 +1,174 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.sidebar
+				ul.breadcrumbs__list.list-inline
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						p.breadcrumbs__active Блог
+				ul.sidebar__menu
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Оплата и доставка
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Скидки
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Отзывы
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Контакты
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") Возврат
+					li.sidebar__menu-item
+						a.sidebar__menu-link.active(href="#") Блог
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") О магазине
+				h3.sidebar__title Наш
+					img.sidebar__img(src="img/instagram.png", alt="")
+				a.sidebar__link(href="#")
+					img.sidebar__img(src="img/insta_box.jpg", alt="")
+				.sidebar__discount
+					a.sidebar__link(href="#")
+						img.sidebar__img(src="img/discount.png", alt="")
+				h3.sidebar__title Рекомендуемые товары
+				.goods__item._sidebar
+					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
+						img.goods__image(src="img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+							img(src="img/content/goods.jpg", alt="")
+						a.goods__button._favorite(href="#")
+				.goods__item._sidebar
+					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
+						img.goods__image(src="img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+							img(src="img/content/goods.jpg", alt="")
+						a.goods__button._favorite(href="#")
+				.goods__item._sidebar
+					a.goods__item-link(href="#")
+						.goods__block-condition
+							p.goods__condition._hot
+							p.goods__condition._sale
+							p.goods__condition._new
+						img.goods__image(src="img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+							img(src="img/content/goods.jpg", alt="")
+						a.goods__button._favorite(href="#")
+				h3.sidebar__title Свежее в блоге
+				.sidebar__blog-preview
+					a.sidebar__blog-link(href="#")
+						img.sidebar__blog-img(src="img/content/blog_thumb.jpg", alt="")
+						p.sidebar__blog-title Модные
+						p.sidebar__blog-date 15 мая 2015
+				.sidebar__blog-preview
+					a.sidebar__blog-link(href="#")
+						img.sidebar__blog-img(src="img/content/blog_thumb.jpg", alt="")
+						p.sidebar__blog-title Модные Женские футболки 2015 и другие аксессуары Модные Женские футболки 2015 и другие аксессуары
+						p.sidebar__blog-date 15 мая 2015
+				.sidebar__blog-preview
+					a.sidebar__blog-link(href="#")
+						img.sidebar__blog-img(src="img/content/blog_thumb.jpg", alt="")
+						p.sidebar__blog-title Модные Женские футболки 2015 и другие аксессуары
+						p.sidebar__blog-date 15 мая 2015
+			.main__section
+				h1.main__title Блог
+				ul.blog__list
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населероба. Футболки носятся мужской половиной населения уже очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время. Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.  при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время. Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очже очень долгое время. Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важень долгое время.
+				ul.blog__list
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важн долгое время. Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населнт мужскогчень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.
+				ul.blog__list
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время.
+					li.blog__item
+						a.blog__link(href="#")
+							img.blog__image(src="img/content/blog_img.jpg", alt="")
+							p.blog__title Модные мужские футболки 2015
+						p.blog__date 15 мая 2015
+						p.blog__text Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время. Мужские футболки - это очень важный и при этом универсальный элемент мужского гардероба. Футболки носятся мужской половиной населения уже очень долгое время. 
+							a.blog__inner-link(href="#") что то еще
+				.clear
+				.text-center
+					button.button._see-more(type="button") подгрузить еще
+			.clear
+			
