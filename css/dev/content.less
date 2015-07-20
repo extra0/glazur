@@ -922,13 +922,14 @@
 	&__block {
 		background: #f9f9f6;
 		border-radius: 15px;
-		padding: 20px;
+		padding: 10px 20px;
+		margin-bottom: 60px;
 	}
 	&__table {
 		width: 100%;
 	}
 	&__cell {
-		padding: 0;
+		padding: 10px 0;
 		&._text-r { text-align: right;}
 		&._text-c {	text-align: center;}
 		&:first-child {	width: 38%;}
@@ -937,6 +938,7 @@
 	&__head-text {
 		font-style: italic;
 		font-size: 16px;
+		margin-bottom: 40px;
 		color: #333;
 	}
 	&__status {
@@ -961,6 +963,7 @@
 	&__date {
 		color: #8c8c8c;
 		margin-left: 24px;
+		margin: -20px 0 0 24px;
 		position: relative;
 		&:before {
 			position: absolute;
@@ -1017,6 +1020,7 @@
 		border-radius: 5px;
 		&._green {background: #00a651;}
 		&._red {background: #e30613;}
+		&._blue {background: #312783;}
 	}
 	&__size,
 	&__quantity {
@@ -1025,6 +1029,7 @@
 	&__price {
 		font-size: 36px;
 		font-weight: bold;
+		margin: 0;
 	}
 	&__currency {
 		font-size: 20px;
@@ -1033,7 +1038,11 @@
 	&__total-text {
 		font-size: 16px;
 		margin: 14px 30px 0 0;
-		display: block;
+		display: inline-block;
 		font-weight: bold;
+	}
+	&__total {
+		text-align: right;
+		margin: 15px 5.5%;
 	}
 }
