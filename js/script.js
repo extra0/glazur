@@ -73,6 +73,11 @@ $(document).ready(function() {
 	$('.checkbox, select').styler();
 
 	// полет товара в корзину
+	function cloneImg() {
+		$('.goods__item').find('.goods__image._not-active').clone().css({'visibility': 'hidden', 'position': 'absolute'}).removeAttr('class').appendTo('.goods__button._cart');
+	}
+	cloneImg();
+
 	$(".goods__button._cart").click(function() {
 		$("html, body").animate({
 			scrollTop: 0
@@ -84,7 +89,8 @@ $(document).ready(function() {
 			.clone()
 			.css({
 				'position': 'absolute',
-				'z-index': '100'
+				'z-index': '100',
+				'visibility': 'visible'
 			})
 			.appendTo(this)
 			.animate({
