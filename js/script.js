@@ -70,7 +70,7 @@ $(document).ready(function() {
 	$('.mask').mask('+38 (999) 999-99-99');
 
 	//  стилизация чекбоксов и селектов
-	$('.checkbox').styler();
+	$('.checkbox, select').styler();
 
 	// полет товара в корзину
 	$(".goods__button._cart").click(function() {
@@ -98,9 +98,8 @@ $(document).ready(function() {
 			});
 	});
 
-	
 
-	// кастомный скролл
+	// кастомный скролл в фильтре
 	(function($) {
 		$(window).load(function() {
 			$(".filter__brand").mCustomScrollbar();

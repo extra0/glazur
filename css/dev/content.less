@@ -92,6 +92,10 @@
 			width: 75%;
 			margin: 20px 0 43px 5%;
 		}
+		&._catalog {
+			width: 21%;
+			margin: 40px 45px 19px 0px;
+		}
 	}
 	&__image {
 		max-height: 255px;
@@ -105,7 +109,7 @@
 		background-image: url(../img/shadow.png);
 		background-repeat: no-repeat;
 		background-position: top center;
-		padding: 20px;
+		padding: 20px 0 20px 15px;
 		margin-top: 10px;
 		-webkit-transition: all 0.4s ease;
 		-o-transition: all 0.4s ease;
@@ -149,12 +153,39 @@
 		font-size: 20px;
 		font-weight: bold;
 		display: inline-block;
-		margin: 2px 20px 0 0;
+		margin: 2px 5px 0 0;
 		vertical-align: top;
+		&._old {
+			position: relative;
+			font-size: 16px;
+			color: #999;
+			margin: 6px 5px 0 0;
+			&:before {
+				width: 88%;
+				height: 1px;
+				content: '';
+				position: absolute;
+				background: #ff0000;
+				top: 11px;
+				left: -6px;
+				transform: rotate(-16deg);
+				-ms-transform: rotate(-16deg);
+				-webkit-transform: rotate(-16deg);
+			}
+		}
 	}
 	&__currency {
 		font-size: 12px;
 		font-weight: normal;
+	}
+	&__video {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		position: relative;
+		margin-left: 8px;
+		background: url(../img/main_sprite.png) -172px -346px no-repeat;
+		top: 3px;
 	}
 	&__button {
 		width: 23px;
@@ -168,6 +199,7 @@
 		transition: all 0.4s ease;
 		&._cart {
 			background-position: -51px -119px;
+			margin: 4px 9px 0 7px;
 			&:hover {
 				background-position: -51px -151px;
 			}
@@ -255,7 +287,7 @@
 		}
 	}
 	&__bestseller-link {
-		display: block;
+		display: inline-block;
 		font-size: 29px;
 		color: #3262db;
 		margin-bottom: 8px;
@@ -419,6 +451,11 @@
 		margin-left: 365px;
 		margin-bottom: 115px;
 		min-height: 600px;
+		&._catalog {
+			margin-left: 40px;
+			text-align: justify;
+			margin-right: -56px;
+		}
 	}
 	&__title {
 		margin: 0 0 48px 0;
@@ -1089,6 +1126,10 @@
 .sorting  {
 	&__block {
 		float: right;
+		margin: 15px 75px 0 0;
+	}
+	&__text {
+		margin-right: 20px;
 	}
 }
 
