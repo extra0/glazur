@@ -72,13 +72,21 @@ $(document).ready(function() {
 	//  стилизация чекбоксов и селектов
 	$('.checkbox, select').styler();
 
-	// полет товара в корзину
+	//  клонирование элементов для функции полета
 	function cloneImg() {
-		$('.goods__item').find('.goods__image._not-active').clone().css({'visibility': 'hidden', 'position': 'absolute'}).removeAttr('class').appendTo('.goods__button._cart');
+		$('.goods__item-link').each(function(){
+			$(this).children('img:first-child').clone().css({
+				'visibility': 'hidden',
+				'position': 'absolute'
+			}).removeAttr('class').appendTo('a._cart');
+		});
+		// $('a._cart img:first-child').addClass('fly');
+		// $('a._cart').children().not('.fly').remove();
 	}
 	cloneImg();
 
-	$(".goods__button._cart").click(function() {
+	// полет товара в корзину
+	$("a._cart").click(function() {
 		$("html, body").animate({
 			scrollTop: 0
 		}, 1000)
@@ -95,8 +103,8 @@ $(document).ready(function() {
 			.appendTo(this)
 			.animate({
 				opacity: 0.5,
-				marginTop: $('.cart__info').offset().top - $(this).children('img').offset().top,
-				marginLeft: $('.cart__info').offset().left - $(this).children('img').offset().left,
+				marginTop: $('.cart__info').offset().top - $(this).children('img').offset().top + 30,
+				marginLeft: $('.cart__info').offset().left - $(this).children('img').offset().left + 30,
 				width: 50,
 				height: 50
 			}, 860, function() {
