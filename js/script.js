@@ -98,37 +98,7 @@ $(document).ready(function() {
 			});
 	});
 
-	// фильтр цены 
-	$(function() {
-		var min = $('#inp_min'),
-			max = $('#inp_max'),
-			slider = $("#slider-range").slider({
-			range: true,
-			min: 1,
-			max: 10000,
-			step: 100,
-			values: [2000, 6000],
-			slide: function(event, ui) {
-
-				min.val(ui.values[ 0 ] - 1);
-				max.val(ui.values[ 1 ] + 99);
-
-				if (min.val() == 0) {min.val('1');}
-			}
-		});
-		$('#inp_min').on('keyup', function() {
-			slider.slider("values", 0, $(this).val());
-
-			if (min.val() == 0) {
-				min.val('1');
-			}
-		});
-
-		$('#inp_max').on('keyup', function() {
-			slider.slider("values", 1, $(this).val());
-		});
-
-	});
+	
 
 	// кастомный скролл
 	(function($) {
