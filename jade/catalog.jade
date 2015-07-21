@@ -32,15 +32,136 @@ block content
 					li.sidebar__menu-item
 						a.sidebar__menu-link(href="#") мужские аксессуары
 				.filter__block
-					a.filter__reset(href="#") Сбросить
-					h4.filter__title Фильтры
-					label.filter__label Цена
-					input.filter__input(type="text" maxlength="5")
-					input.filter__input._marg(type="text" maxlength="5")
-					.filter__price-line
-						span.filter__price 670
-						span.filter__price 5 100	
-					.filter__range#slider-range
+					form.filter__form(action="#" method="post")
+						a.filter__reset(href="#") Сбросить
+						h4.filter__title Фильтры
+						label.filter__label Цена
+						script.
+							// фильтр цены 
+							$(function() {
+								var min = $('#inp_min'),
+									max = $('#inp_max'),
+									slider = $("#slider-range").slider({
+									range: true,
+									min: 1,
+									max: 10000,
+									step: 100,
+									values: [2000, 6000],
+									slide: function(event, ui) {
+
+										min.val(ui.values[ 0 ] - 1);
+										max.val(ui.values[ 1 ] + 99);
+
+										if (min.val() == 0) {min.val('1');}
+									}
+								});
+								$('#inp_min').on('keyup', function() {
+									slider.slider("values", 0, $(this).val());
+
+									if (min.val() == 0) {
+										min.val('1');
+									}
+								});
+
+								$('#inp_max').on('keyup', function() {
+									slider.slider("values", 1, $(this).val());
+								});
+
+							});
+						input.filter__input#inp_min(type="text" maxlength="5")
+						input.filter__input._marg#inp_max(type="text" maxlength="5")
+						.filter__price-line
+							span.filter__price 670
+							span.filter__price 5 100	
+						.filter__range#slider-range
+						label.filter__label Бренды
+						.filter__brand
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Alexander McQueen
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| BALLY
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| V
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Beach Bunny
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| BIKKEMBERGS
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+							label.filter__brand-name
+								input.filter__input-checkbox.checkbox(type="checkbox")
+								| Abercrombie & Fitch
+						label.filter__label Наличие
+						input.filter__input-checkbox.checkbox#inhave(type="checkbox")
+						label.filter__availability._inhave(for="inhave") Есть в наличии
+						br
+						input.filter__input-checkbox.checkbox#delivery(type="checkbox")
+						label.filter__availability._delivery(for="delivery") Доставка 2-3 недели
+						.filter__sumbit-block
+							button.button._filter(type="submit") Подобрать
 			.main__section
 				.sorting__block
 					span.sorting__text Сортировать:

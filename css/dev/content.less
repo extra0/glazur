@@ -382,6 +382,13 @@
 			color: #fff;
 		}
 	}
+	// кнопка подобрать в фильтре
+	&._filter {
+		font-size: 16px;
+		width: 185px;
+		height: 47px;
+		background-position: -5px -79px;
+	}
 }
 
 /* блок описания */
@@ -1091,9 +1098,10 @@
 		background: #f4f2ed;
 		border-radius: 15px;
 		box-sizing: border-box;
-		padding: 20px 35px 20px 20px;
+		padding: 20px 35px 152px 20px;
 		width: 300px;
 		margin: 0 0 0 5px;
+		position: relative;
 	}
 	&__reset {
 		float: right;
@@ -1146,6 +1154,7 @@
 	&__range {
 		background: #fff;
 		border-radius: 3px;
+		margin-bottom: 45px;
 		border: 1px solid #979795;
 		span {
 			background: url(../img/main_sprite.png) -299px 0 no-repeat;
@@ -1156,5 +1165,48 @@
 				outline: none;
 			}
 		}
+	}
+	&__brand {
+		height: 370px;
+		margin-bottom: 71px;
+	}
+	&__brand-name {
+		display: block;
+		color: #666;
+		margin: 3px 0 12px 0;
+	}
+	&__availability {
+		color: #666;
+		display: inline-block;
+		margin-bottom: 20px;
+		padding-left: 31px;
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			width: 21px;
+			background: url(../img/main_sprite.png) 0 0 no-repeat;
+			height: 18px;
+			top: 0;
+			left: 0;
+		}
+		&._inhave {
+			&:before {background-position: -203px -308px;}
+		}
+		&._delivery {
+			&:before {background-position: -172px -308px;}
+		}
+	}
+	&__sumbit-block {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		box-sizing: border-box;
+		margin-bottom: 0;
+		text-align: center;
+		background: #eceae1;
+		border-radius: 0 0 15px 15px;
 	}
 }

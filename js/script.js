@@ -100,16 +100,41 @@ $(document).ready(function() {
 
 	// фильтр цены 
 	$(function() {
-		$("#slider-range").slider({
+		var min = $('#inp_min'),
+			max = $('#inp_max'),
+			slider = $("#slider-range").slider({
 			range: true,
 			min: 1,
-			max: 500,
-			values: [1, 500],
+			max: 10000,
+			step: 100,
+			values: [2000, 6000],
 			slide: function(event, ui) {
-				$("#amount").val(ui.values[0], ui.values[1]);
+
+				min.val(ui.values[ 0 ] - 1);
+				max.val(ui.values[ 1 ] + 99);
+
+				if (min.val() == 0) {min.val('1');}
 			}
 		});
-		$("#amount").val($("#slider-range").slider("values", 0), $("#slider-range").slider("values", 1));
+		$('#inp_min').on('keyup', function() {
+			slider.slider("values", 0, $(this).val());
+
+			if (min.val() == 0) {
+				min.val('1');
+			}
+		});
+
+		$('#inp_max').on('keyup', function() {
+			slider.slider("values", 1, $(this).val());
+		});
+
 	});
+
+	// кастомный скролл
+	(function($) {
+		$(window).load(function() {
+			$(".filter__brand").mCustomScrollbar();
+		});
+	})(jQuery);
 
 });

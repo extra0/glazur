@@ -39,7 +39,8 @@
               <li class="univ__item"><a href="#" class="univ__link">О магазине</a></li>
             </ul>
             <div class="enter__block">
-              <p class="enter__text _login">Привет, Катя!</p><a href="#" class="enter__link enter fancy">Вход</a><a href="#" class="enter__link profile">Профиль</a><a href="#" class="enter__link exit">Выйти</a>
+              <p class="enter__text _login">Привет, Катя!</p>
+              <!-- <a href="#" class="enter__link enter fancy">Вход</a>--><a href="#" class="enter__link profile">Профиль</a><a href="#" class="enter__link exit">Выйти</a>
               <div class="modal__window">
                 <div id="tabs" class="modal__block">
                   <ul class="modal__list list-inline">
@@ -205,13 +206,137 @@
               </li>
               <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link">мужские аксессуары</a></li>
             </ul>
-            <div class="filter__block"><a href="#" class="filter__reset">Сбросить</a>
-              <h4 class="filter__title">Фильтры</h4>
-              <label class="filter__label">Цена</label>
-              <input type="text" maxlength="5" class="filter__input">
-              <input type="text" maxlength="5" class="filter__input _marg">
-              <div class="filter__price-line"><span class="filter__price">670</span><span class="filter__price">5 100	</span></div>
-              <div id="slider-range" class="filter__range"></div>
+            <div class="filter__block">
+              <form action="#" method="post" class="filter__form"><a href="#" class="filter__reset">Сбросить</a>
+                <h4 class="filter__title">Фильтры</h4>
+                <label class="filter__label">Цена</label>
+                <script>
+                  // фильтр цены 
+                  $(function() {
+                  	var min = $('#inp_min'),
+                  		max = $('#inp_max'),
+                  		slider = $("#slider-range").slider({
+                  		range: true,
+                  		min: 1,
+                  		max: 10000,
+                  		step: 100,
+                  		values: [2000, 6000],
+                  		slide: function(event, ui) {
+                  
+                  			min.val(ui.values[ 0 ] - 1);
+                  			max.val(ui.values[ 1 ] + 99);
+                  
+                  			if (min.val() == 0) {min.val('1');}
+                  		}
+                  	});
+                  	$('#inp_min').on('keyup', function() {
+                  		slider.slider("values", 0, $(this).val());
+                  
+                  		if (min.val() == 0) {
+                  			min.val('1');
+                  		}
+                  	});
+                  
+                  	$('#inp_max').on('keyup', function() {
+                  		slider.slider("values", 1, $(this).val());
+                  	});
+                  
+                  });
+                </script>
+                <input id="inp_min" type="text" maxlength="5" class="filter__input">
+                <input id="inp_max" type="text" maxlength="5" class="filter__input _marg">
+                <div class="filter__price-line"><span class="filter__price">670</span><span class="filter__price">5 100	</span></div>
+                <div id="slider-range" class="filter__range"></div>
+                <label class="filter__label">Бренды</label>
+                <div class="filter__brand">
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Alexander McQueen
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">BALLY
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">V
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Beach Bunny
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">BIKKEMBERGS
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                  <label class="filter__brand-name">
+                    <input type="checkbox" class="filter__input-checkbox checkbox">Abercrombie & Fitch
+                  </label>
+                </div>
+                <label class="filter__label">Наличие</label>
+                <input id="inhave" type="checkbox" class="filter__input-checkbox checkbox">
+                <label for="inhave" class="filter__availability _inhave">Есть в наличии</label><br>
+                <input id="delivery" type="checkbox" class="filter__input-checkbox checkbox">
+                <label for="delivery" class="filter__availability _delivery">Доставка 2-3 недели</label>
+                <div class="filter__sumbit-block">
+                  <button type="submit" class="button _filter">Подобрать</button>
+                </div>
+              </form>
             </div>
           </div>
           <div class="main__section">
@@ -287,6 +412,9 @@
     <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
     <script src="js/jquery.js"></script>
     <script src="js/plugins.js"></script>
+    <!-- подключить только на странице каталога-->
+    <script src="js/mCustomScrollbar.min.js"></script>
+    <!-- ====================================-->
     <script src="js/script.js"></script>
   </body>
 </html>
