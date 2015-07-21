@@ -316,7 +316,7 @@
 	&__block-condition {
 		position: absolute;
 		top: 20px;
-		right: -49px;
+		right: -30px;
 	}
 	&__condition {
 		margin: 7px 0;
@@ -600,6 +600,7 @@
 	float: left;
 	margin-right: 35px;
 	position: relative;
+	margin-bottom: 100px;
 	z-index: 50;
 	&__menu {
 		padding: 0;
@@ -682,6 +683,36 @@
 	&__blog-date {
 		color: #8b8b8b;
 		margin: 0 0 0 126px;
+	}
+	&__menu-2 {
+		list-style-type: none;
+		margin: 18px 0 -11px 37px;
+		padding: 0;
+	}
+	&__menu-item-2 {
+		line-height: 31px;
+	}
+	&__menu-link-3,
+	&__menu-link-2 {
+		font-size: 15px;
+		color: #999;
+		text-transform: uppercase;
+		font-weight: bold;
+		&.active,
+		&:hover {
+			color: #932992;
+		}
+		&.active {
+			cursor: default;
+		}
+	}
+	&__menu-3 {
+		list-style-type: none;
+		margin: 0 0 7px 33px;
+		padding: 0;
+	}
+	&__menu-link-3 {
+		font-size: 13px;
 	}
 }
 
@@ -1044,5 +1075,86 @@
 	&__total {
 		text-align: right;
 		margin: 15px 5.5%;
+	}
+}
+
+// блок сортировки в каталоге
+.sorting  {
+	&__block {
+		float: right;
+	}
+}
+
+// фильтр в сайдбаре
+.filter {
+	&__block {
+		background: #f4f2ed;
+		border-radius: 15px;
+		box-sizing: border-box;
+		padding: 20px 35px 20px 20px;
+		width: 300px;
+		margin: 0 0 0 5px;
+	}
+	&__reset {
+		float: right;
+		border-bottom: 1px dotted;
+		display: inline-block;
+		margin: 6px 0 0 0;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}		
+	}
+	&__title {
+		font-size: 22px;
+		color: #932992;
+		text-transform: uppercase;
+		margin: 0 0 26px 0;
+	}
+	&__label {
+		color: #333;
+		font-weight: bold;
+		font-size: 16px;
+		display: block;
+		margin-bottom: 20px;
+	}
+	&__input {
+		width: 114px;
+		height: 38px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		border: 1px solid #949492;
+		margin-right: 12px;
+		outline: none;
+		padding: 0 15px;
+		font-size: 16px;
+		color: #333;
+		font-weight: bold;
+		&._marg {
+			margin: 0;
+		}
+	}
+	&__price-line {
+		margin: 17px 0;
+	}
+	&__price {
+		color: #666;
+		font-weight: 300;
+		&:last-child {
+			float: right;
+		}
+	}
+	&__range {
+		background: #fff;
+		border-radius: 3px;
+		border: 1px solid #979795;
+		span {
+			background: url(../img/main_sprite.png) -299px 0 no-repeat;
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 }

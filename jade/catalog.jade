@@ -1,0 +1,57 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.sidebar
+				ul.breadcrumbs__list.list-inline
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Мужчинам
+					li.breadcrumbs__item
+						p.breadcrumbs__active Обувь
+				ul.sidebar__menu
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") мужская Одежда
+					li.sidebar__menu-item
+						a.sidebar__menu-link.active(href="#") Мужская обувь
+						ul.sidebar__menu-2
+							li.sidebar__menu-item-2
+								a.sidebar__menu-link-2.active(href="#") Кеды, кроссовки
+								ul.sidebar__menu-3
+									li.sidebar__menu-item-3
+										a.sidebar__menu-link-3(href="#") обычные кеды
+									li.sidebar__menu-item-3
+										a.sidebar__menu-link-3.active(href="#") кеды необычные
+							li.sidebar__menu-item-2
+								a.sidebar__menu-link-2(href="#") туфли
+							li.sidebar__menu-item-2
+								a.sidebar__menu-link-2(href="#") мокасины
+							li.sidebar__menu-item-2
+								a.sidebar__menu-link-2(href="#") эспадрильи
+					li.sidebar__menu-item
+						a.sidebar__menu-link(href="#") мужские аксессуары
+				.filter__block
+					a.filter__reset(href="#") Сбросить
+					h4.filter__title Фильтры
+					label.filter__label Цена
+					input.filter__input(type="text" maxlength="5")
+					input.filter__input._marg(type="text" maxlength="5")
+					.filter__price-line
+						span.filter__price 670
+						span.filter__price 5 100	
+					.filter__range#slider-range
+			.main__section
+				.sorting__block
+					span.sorting__text Сортировать:
+					a.sorting__link(href="#") по цене
+				h1.main__title Мужская обувь
+				
+			.clear
+			.description__block
+				h1.description__title Модная одежда и обувь от интернет-магазина
+				p.description__text
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+				p.description__text
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+			

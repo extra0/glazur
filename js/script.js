@@ -25,7 +25,7 @@ $(document).ready(function() {
 	$('.goods__item').hover(function() {
 		$(this).find(".goods__image").toggleClass("_not-active");
 	});
-	
+
 	$('.goods__bestseller').hover(function() {
 		$(this).find(".goods__bestseller-image").toggleClass("_not-active");
 	});
@@ -96,6 +96,20 @@ $(document).ready(function() {
 			}, 860, function() {
 				$(this).remove();
 			});
+	});
+
+	// фильтр цены 
+	$(function() {
+		$("#slider-range").slider({
+			range: true,
+			min: 1,
+			max: 500,
+			values: [1, 500],
+			slide: function(event, ui) {
+				$("#amount").val(ui.values[0], ui.values[1]);
+			}
+		});
+		$("#amount").val($("#slider-range").slider("values", 0), $("#slider-range").slider("values", 1));
 	});
 
 });
