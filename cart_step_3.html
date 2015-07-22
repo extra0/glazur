@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,700italic,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- подключить только на странице каталога-->
+    <script src="js/mCustomScrollbar.min.js"></script>
+    <!-- ====================================-->
+    <script src="js/script.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="fancybox-placeholder"></div>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__top">
+            <div class="cart__block">
+              <div class="cart__image">
+                <div class="cart__info">
+                  <p class="cart__num-item">3</p>
+                  <p class="cart__text _strong">товара</p>
+                  <p class="cart__text">на сумму</p>
+                  <p class="cart__price">10 546 <span class="cart__text">грн.</span></p>
+                </div>
+              </div>
+              <p class="cart__title">Корзина</p><span class="cart__empty">пока пуста :(</span><a href="#" class="button _cart">Оформить</a>
+            </div>
+            <ul class="univ__list list-inline">
+              <li class="univ__item"><a href="#" class="univ__link">Оплата и доставка</a></li>
+              <li class="univ__item"><a href="#" class="univ__link">Скидки</a></li>
+              <li class="univ__item"><a href="#" class="univ__link">Отзывы</a></li>
+              <li class="univ__item"><a href="#" class="univ__link">Контакты</a></li>
+              <li class="univ__item"><a href="#" class="univ__link">Возврат</a></li>
+              <li class="univ__item"><a href="#" class="univ__link">Блог</a></li>
+              <li class="univ__item"><a href="#" class="univ__link">О магазине</a></li>
+            </ul>
+            <div class="enter__block">
+              <p class="enter__text _login">Привет, Катя!</p>
+              <!-- <a href="#" class="enter__link enter fancy">Вход</a>--><a href="#" class="enter__link profile">Профиль</a><a href="#" class="enter__link exit">Выйти</a>
+              <div class="modal__window">
+                <div id="tabs" class="modal__block">
+                  <ul class="modal__list list-inline">
+                    <li class="modal__item"><a href="#enter" class="modal__tab-link">Вход</a></li>
+                    <li class="modal__item"><a href="#registration" class="modal__tab-link">регистрация</a></li>
+                  </ul>
+                  <div id="enter">
+                    <form action="#" class="modal__form">
+                      <input type="email" placeholder="Електронная почта" required class="modal__input">
+                      <input type="password" placeholder="пароль" required class="modal__input">
+                      <label class="modal__label"> 
+                        <input type="checkbox" class="modal__input checkbox">Запомнить меня
+                      </label><a href="#" class="modal__link">Напомнить пароль</a>
+                      <div class="modal__footer">
+                        <button type="submit" class="button _submit">Войти</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="registration">
+                    <form action="#" class="modal__form">
+                      <input type="text" placeholder="Имя и Фамилия" required class="modal__input">
+                      <input type="email" placeholder="Електронная почта" required class="modal__input">
+                      <input type="password" placeholder="пароль" required class="modal__input">
+                      <input type="tel" placeholder="телефон" required class="modal__input mask">
+                      <input type="text" placeholder="город" required class="modal__input">
+                      <p class="modal__text">Регистрируясь, вы соглашаетесь с <a href="#" class="modal__link _b-solid">пользовательским соглашением</a></p>
+                      <div class="modal__footer">
+                        <button type="submit" class="button _submit">зарегистрироваться</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <div class="header__location"><a href="#" class="header__location-link"><span class="header__line">Одесса, “Сити 25”, бутик №337</span></a></div>
+          <div class="header__time _min">
+            <p class="header__time-text">Звоните с 11<sup>00</sup> до 18<sup>00</sup></p>
+            <p class="header__time-text">Выходной: понедельник</p>
+          </div>
+          <div class="header__phone-block _min">
+            <p onclick="window.location.href='tel:+380938818299';" class="header__phone"><span class="header__prefix">+38 093 </span>881-82-99</p>
+            <p onclick="window.location.href='tel:+380500535302';" class="header__phone hide"><span class="header__prefix">+38 050 </span>053-53-02</p>
+            <p onclick="window.location.href='tel:+380960470318';" class="header__phone hide"><span class="header__prefix">+38 096 </span>047-03-18</p>
+            <p class="header__phone-text">И еще <a href="#" class="header__phone-link">2 телефона</a></p><span class="header__phone-image"></span>
+          </div>
+          <div class="header__wishes-block">
+            <p class="header__wishes-title">Желания</p><a href="#" class="header__wishes-link">	7 товаров	</a>
+          </div>
+          <p class="attention _header">Внимание! 1 и 2 мая – выходные дни</p>
+        </div>
+      </header>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="cart__header">
+            <ul class="cart__header-list list-inline">
+              <li class="cart__header-item">
+                <p class="cart__header-title">1. Список товаров</p>
+                <p class="cart__header-text">То что вы добавили в корзину</p>
+              </li>
+              <li class="cart__header-item">
+                <p class="cart__header-title">2. Оформление заказа</p>
+                <p class="cart__header-text">Доставка и способ оплаты</p>
+              </li>
+              <li class="cart__header-item active">
+                <p class="cart__header-title">3. Подтверждение заказа</p>
+                <p class="cart__header-text">Все верно? Заказываем!</p>
+              </li>
+            </ul>
+            <div class="confirm__block">
+              <p class="confirm__title">Ваш заказ № 375985 успешно создан!</p>
+              <p class="confirm__text">Через несколько минутна Ваш e-mail придет письмо с информацией о заказе. Наш консультант в течении получаса свяжеться с Вами для подтверждения заказа.</p>
+              <p class="confirm__text _sizeL">Благодарим за покупку в нашем интернет-магазине!</p>
+              <p class="attention">Следите за состоянием заказа в <a href="#" class="attention__link _s-line">личном кабинете</a></p>
+              <div class="text-center"><a href="#" class="confirm__link">Продолжить покупки</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+  </body>
+</html>

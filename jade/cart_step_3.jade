@@ -1,0 +1,24 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.cart__header
+				ul.cart__header-list.list-inline
+					li.cart__header-item
+						p.cart__header-title 1. Список товаров
+						p.cart__header-text То что вы добавили в корзину
+					li.cart__header-item
+						p.cart__header-title 2. Оформление заказа
+						p.cart__header-text Доставка и способ оплаты
+					li.cart__header-item.active
+						p.cart__header-title 3. Подтверждение заказа
+						p.cart__header-text Все верно? Заказываем!
+				.confirm__block
+					p.confirm__title Ваш заказ № 375985 успешно создан!
+					p.confirm__text Через несколько минутна Ваш e-mail придет письмо с информацией о заказе. Наш консультант в течении получаса свяжеться с Вами для подтверждения заказа.
+					p.confirm__text._sizeL Благодарим за покупку в нашем интернет-магазине!
+					p.attention Следите за состоянием заказа в 
+						a.attention__link._s-line(href="#") личном кабинете
+					.text-center
+						a.confirm__link(href="#") Продолжить покупки
+				
