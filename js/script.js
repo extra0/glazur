@@ -121,15 +121,15 @@ $(document).ready(function() {
 
 	$('.intresting__changer').click(function(event) {
 		
-		if (i < (num + 1)) {
-			// console.log(i);
+		if (i < num) {
 			block.eq(i - 1).removeClass('active');
 			block.eq(i).toggleClass('active');
+			console.log(i);
 			i++;
 		} else {
 			i = 1;
 			block.eq(0).addClass('active');
-			console.log(i);
+			block.eq(-1).removeClass('active');
 		}
 		
 		return false;
