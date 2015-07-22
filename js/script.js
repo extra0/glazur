@@ -114,4 +114,25 @@ $(document).ready(function() {
 		});
 	})(jQuery);
 
+	// меняем блоки в разделе интересного
+	var i = 1,
+		block = $('.intresting__inner'),
+		num = block.length;
+
+	$('.intresting__changer').click(function(event) {
+		
+		if (i < (num + 1)) {
+			// console.log(i);
+			block.eq(i - 1).removeClass('active');
+			block.eq(i).toggleClass('active');
+			i++;
+		} else {
+			i = 1;
+			block.eq(0).addClass('active');
+			console.log(i);
+		}
+		
+		return false;
+	});
+
 });
