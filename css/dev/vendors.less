@@ -423,8 +423,8 @@
   filter: alpha(opacity=55);
 }
 .jq-radio {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   border: 1px solid #a4a4ab;
   border-radius: 50%;
   box-shadow: 0 1px 1px rgba(0,0,0,0.05), inset -1px -1px #FFF, inset 1px -1px #FFF;
@@ -435,9 +435,17 @@
 .jq-radio.checked .jq-radio__div {
   width: 10px;
   height: 10px;
-  margin: 3px 0 0 3px;
+  margin: 6px 0 0 6px;
   border-radius: 50%;
-  background: #383949;
+  background: rgb(145,45,177); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(145,45,177,1) 0%, rgba(105,59,152,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(145,45,177,1)), color-stop(100%,rgba(105,59,152,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(145,45,177,1) 0%,rgba(105,59,152,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(145,45,177,1) 0%,rgba(105,59,152,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(145,45,177,1) 0%,rgba(105,59,152,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(145,45,177,1) 0%,rgba(105,59,152,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#912db1', endColorstr='#693b98',GradientType=0 ); /* IE6-9 */
+
 }
 .jq-radio.disabled {
   opacity: 0.55;

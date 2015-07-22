@@ -2,6 +2,7 @@
 	.container-fluid {
 		padding-top: 35px;
 		padding-bottom: 70px;
+		min-height: 88vh;
 	}
 }
 /* слайдер на главной */
@@ -1117,6 +1118,11 @@
 		&._margl {
 			margin-left: 120px;
 		}
+		&._marg-non {
+			display: inline-block;
+			margin: 0 0 0 5px;
+			font-size: 14px;
+		}
 	}
 	&__img {
 		border-radius: 10px;
@@ -1139,12 +1145,19 @@
 		font-size: 36px;
 		font-weight: bold;
 		margin: 0;
+		&._sidebar {
+			font-size: 20px;
+			text-align: right;
+		}
 	}
 	&__currency {
 		font-size: 20px;
 		font-weight: normal;
 		&._sizeM {
 			font-size: 14px;
+		}
+		&._sizeS {
+			font-size: 12px;
 		}
 	}
 	&__total-text {
@@ -1216,6 +1229,29 @@
 		&._v-align {
 			vertical-align: top;
 		}
+	}
+	// товары в корзине на втором шаге
+	&__item-block {
+		border-bottom: 1px solid #e5e6e6;
+		padding-bottom: 7px;
+		margin-bottom: 19px;
+	}
+	&__option-title {
+		display: inline-block;
+		vertical-align: top;
+		margin: 3px 9px 0 7px;
+		color: #333;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	&__option-block {
+		margin-left: 114px;
+	}
+	&__foot-block {
+		display: inline-block;
+		text-align: right;
+		width: 49%;
+		margin-top: 10px;
 	}
 }
 
@@ -1401,6 +1437,13 @@
 	&__table-item {
 		padding: 10px 0;
 	}
+	// сайтбар в корзине на 2 шаге
+	&__sidebar {
+		float: left;
+		width: 418px;
+		z-index: 2;
+		position: relative;
+	}
 }
 
 // блок подтверждения на 3-м шаге корзины
@@ -1425,8 +1468,194 @@
 		border-bottom: 1px solid;
 		display: inline-block;
 		margin-top: 40px;
+		margin-bottom: 150px;
 		&:hover {
 			border-bottom: 1px solid transparent;
+		}
+	}
+}
+
+// блок оформления заказа 2 шаг
+.formalization {
+	&__section {
+		padding-bottom: 100px;
+	}
+	&__block {
+		background: #f4f2ed;
+		border-radius: 15px;
+		position: relative;
+		padding: 30px 40px 140px 40px;
+		box-sizing: border-box;
+		margin-left: 465px
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+		margin: 0 0 20px 0;
+	}
+	&__label {
+		color: #333;
+		font-size: 18px;
+		margin: 0 0 10px 0;
+		vertical-align: bottom;
+		display: block;
+	}
+	&__radio {
+		margin-right: 20px;
+	}
+	&__cost {
+		float: right;
+		font-size: 18px;
+		color: #333;
+		font-weight: bold;
+		margin: 0;
+	}
+	&__currency {
+		font-size: 14px;
+		font-weight: normal;
+		display: inline-block;
+	}
+	&__question {
+		display: inline-block;
+		position: relative;
+		width: 16px;
+		height: 16px;
+		margin: 0px 0 -3px 10px;
+		background: url(../img/main_sprite.png) -432px -177px no-repeat;
+		cursor: pointer;
+		&:hover {
+			.formalization__popup {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__popup {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: opacity 0.4s ease;
+		-o-transition: opacity 0.4s ease;
+		-moz-transition: opacity 0.4s ease;
+		transition: opacity 0.4s ease;
+		background: #777;
+		border-radius: 7px;
+		padding: 15px;
+		font-size: 12px;
+		color: #fff;
+		box-sizing: border-box;
+		width: 250px;
+		top: 23px;
+		left: -113px;
+		cursor: default;
+		z-index: 120;
+		&:before {
+			position: absolute;
+			content: '';
+			border-left: 3px solid transparent;
+			border-right: 3px solid transparent;
+			border-bottom: 7px solid #777;
+			top: -6px;
+			left: 119px;
+		}
+	}
+	&__text {
+		float: right;
+		color: #333;
+		margin: 6px 0 0 0;
+		display: inline-block;
+		font-size: 14px;
+		&._light {
+			float: none;
+			font-weight: 300;
+			font-size: 18px;
+		}
+	}
+	&__link {
+		display: inline-block;
+		border-bottom: 1px solid;
+		line-height: 15px;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
+	&__type {
+		margin-bottom: 45px;
+	}
+	&__table {
+		width: 100%;
+	}
+	&__table-item {
+		&:first-child {
+			width: 46%;
+		}
+		&:last-child {
+			width: 54%;
+		}
+	}
+	&__message {
+		width: 100%;
+		resize: none;
+		height: 125px;
+		color: #999;
+		border: 1px solid #949492;
+		padding: 15px;
+		box-sizing: border-box;
+		font-size: 13px;
+		border-radius: 5px;
+		outline: none;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	&__table-item {
+		vertical-align: top;
+	}
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #eceae1;
+		border-radius: 0 0 15px 15px;
+	}
+	&__select {
+		&.jq-selectbox {
+			background-color: #fff;
+			width: 100%;
+			box-sizing: border-box;
+			line-height: 38px;
+			border-radius: 5px;
+			border: 1px solid #949492;
+			.jq-selectbox__select-text {
+				color: #999;
+				padding: 0 15px;
+				font-size: 13px;
+				font-weight: bold;
+				text-transform: uppercase;
+				border-bottom: none;
+			}
+			.jq-selectbox__dropdown {
+				position: relative;
+				width: 100%;
+				top: 38px;
+				right: 0;
+			}
+			.jq-selectbox__trigger-arrow {
+				top: 16px;
+				right: 14px;
+				border-top: 7px solid #878787;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+			}
+		}
+	}
+	&__table-text {
+		margin: 10px 0 24px 0;
+		font-size: 16px;
+		color: #333;
+		&._strong {
+			font-weight: bold;
 		}
 	}
 }

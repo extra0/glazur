@@ -67,10 +67,10 @@ $(document).ready(function() {
 	});
 
 	// маска на телефоны
-	$('.mask').mask('+38 (999) 999-99-99');
+	$('.mask').mask('+38 (999) 999 99 99');
 
 	//  стилизация чекбоксов и селектов
-	$('.checkbox, select').styler();
+	$('.checkbox, .select, .radio').styler();
 
 	// полет товара в корзину
 	$("a._cart").click(function() {
