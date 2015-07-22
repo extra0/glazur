@@ -1,0 +1,189 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.cart__header
+				ul.cart__header-list.list-inline
+					li.cart__header-item
+						p.cart__header-title 1. Список товаров
+						p.cart__header-text То что вы добавили в корзину
+					li.cart__header-item
+						p.cart__header-title 2. Оформление заказа
+						p.cart__header-text Доставка и способ оплаты
+					li.cart__header-item.active
+						p.cart__header-title 3. Подтверждение заказа
+						p.cart__header-text Все верно? Заказываем!
+				.cart__sidebar
+					.order__item-block
+						a.order__link(href="#")
+							img.order__img(src="img/content/order_thumb.jpg", alt="")
+							p.order__title._sizeL zara кеды leather good best keds color green
+						.order__option-block
+							p.order__option-title Цвет:
+							img.order__color(src="img/green.png", alt="")
+							p.order__option-title Размер:
+								span.order__option._marg-non 39
+							p.order__option-title Кол-во:
+								span.order__option._marg-non 1
+						span.order__option._margl Без коробки
+						p.order__price._sidebar 1 920 
+							span.order__currency._sizeS грн. 
+					.order__item-block
+						a.order__link(href="#")
+							img.order__img(src="img/content/order_thumb.jpg", alt="")
+							p.order__title._sizeL zara кеды leather
+						.order__option-block
+							p.order__option-title Цвет:
+							img.order__color(src="img/red.png", alt="")
+							p.order__option-title Размер:
+								span.order__option._marg-non 39
+							p.order__option-title Кол-во:
+								span.order__option._marg-non 1
+						span.order__option._margl Без коробки Без коробкиБез коробкиБезБез коробкиБез коробки
+						p.order__price._sidebar 1 920 
+							span.order__currency._sizeS грн.
+					.order__foot-block
+						p.order__text Всего:
+						p.order__text._italic Ваша скидка (3%):
+						p.order__text._italic Сумма личного счёта:
+						p.order__text._italic + Доставка
+						p.order__text._total Итого:
+					.order__foot-block
+						p.order__text._strong 1890 
+							span.order__currency._sizeM грн.
+						p.order__text._italic._strong - 150 
+							span.order__currency._sizeM грн.
+						p.order__text._italic._strong - 900 
+							span.order__currency._sizeM грн.
+						p.order__text._italic._strong 60
+							span.order__currency._sizeM грн.
+						p.order__text._sizeL 1 340 
+							span.order__currency грн.
+				.formalization__section
+					.formalization__block._padd-b
+						form.formalization__form(action="#" method="post")
+							.formalization__type
+								p.formalization__title Выберите тип доставки:
+								label.formalization__label
+									p.formalization__cost 0 
+										span.formalization__currency грн.
+									input.formalization__radio.radio(type="radio" name="delivery" checked)
+									| Забрать в магазине в Одессе
+									span.formalization__question
+										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+								label.formalization__label
+									p.formalization__cost 30 
+										span.formalization__currency грн.
+									input.formalization__radio.radio(type="radio" name="delivery")
+									| Курьерская доставка по Одессе
+									span.formalization__question
+										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+								label.formalization__label
+									p.formalization__text По 
+										a.formalization__link(href="#") тарифам
+										|  Новой Почты
+									input.formalization__radio.radio(type="radio" name="delivery")
+									| Новая почта
+									span.formalization__question
+										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+							.formalization__type
+								p.formalization__title Выберите способ оплаты:
+								label.formalization__label
+									input.formalization__radio.radio(type="radio" name="pay" checked)
+									| Оплата при получении
+									span.formalization__question
+										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
+								label.formalization__label
+									input.formalization__radio.radio(type="radio" name="pay")
+									| Перевод на карту Приватбанка 
+									span.formalization__text._light (доставка Новой Почтой - бесплатная)
+							table.formalization__table
+								tbody
+									tr.formalization__table-line
+										td.formalization__table-item
+											p.formalization__table-text Укажите город
+										td.formalization__table-item
+											select.formalization__select.select
+												option(value="1") Одесса
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+									tr.formalization__table-line
+										td.formalization__table-item
+											p.formalization__table-text Укажите номер отделения
+										td.formalization__table-item
+											select.formalization__select.select
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+									tr.formalization__table-line
+										td.formalization__table-item
+											p.formalization__table-text._strong Комментарий к доставке
+										td.formalization__table-item
+											textarea.formalization__message
+					.formalization__block.tabs
+						ul.modal__list.list-inline
+							li.modal__item
+								a.modal__tab-link(href="#enter_cart") Вход
+							li.modal__item
+								a.modal__tab-link(href="#new_client") Новый клиент
+						#enter_cart
+							form.formalization__form(action="#" method="post")
+								table.formalization__table
+									tbody
+										tr.formalization__table-line
+											td.formalization__table-item
+												p.formalization__table-text._strong Электронный адрес
+											td.formalization__table-item
+												input.formalization__input(type="email" required)
+										tr.formalization__table-line
+											td.formalization__table-item
+												a.formalization__link._float-r(href="#") Я забыл пароль
+												p.formalization__table-text._strong Пароль
+											td.formalization__table-item
+												input.formalization__input(type="password" required)
+								.formalization__footer
+									table.formalization__table
+										tbody
+											tr.formalization__table-line
+												td.formalization__table-item
+												td.formalization__table-item
+													button.button._see-more(type="submit") Вход
+						#new_client
+							form.formalization__form(action="#" method="post")
+								table.formalization__table
+									tbody
+										tr.formalization__table-line
+											td.formalization__table-item
+												p.formalization__table-text._strong Имя и Фамилия
+											td.formalization__table-item
+												input.formalization__input(type="text" required)
+										tr.formalization__table-line
+											td.formalization__table-item
+												p.formalization__table-text._strong Мобильный телефон
+											td.formalization__table-item
+												input.formalization__input.mask(type="tel" required)
+										tr.formalization__table-line
+											td.formalization__table-item
+												p.formalization__table-text._strong Город и адрес
+											td.formalization__table-item
+												input.formalization__input(type="text" required)
+										tr.formalization__table-line
+											td.formalization__table-item
+												p.formalization__table-text._strong Электронный адрес
+											td.formalization__table-item
+												input.formalization__input(type="email" required)
+								.formalization__footer
+									table.formalization__table
+										tbody
+											tr.formalization__table-line
+												td.formalization__table-item
+												td.formalization__table-item
+													button.button._see-more(type="submit") Вход
+				.clear
+					

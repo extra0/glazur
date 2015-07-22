@@ -58,7 +58,7 @@ $(document).ready(function() {
 	});
 
 	// вызываем табы
-	$('#tabs').tabs({
+	$('.tabs').tabs({
 		active: 2,
 		show: {
 			effect: "fade",

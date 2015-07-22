@@ -1486,7 +1486,11 @@
 		position: relative;
 		padding: 30px 40px 140px 40px;
 		box-sizing: border-box;
-		margin-left: 465px
+		margin-left: 465px;
+		margin-bottom: 30px;
+		&._padd-b {
+			padding: 30px 40px 40px 40px;
+		}
 	}
 	&__title {
 		font-size: 16px;
@@ -1579,6 +1583,11 @@
 		&:hover {
 			border-bottom: 1px solid transparent;
 		}
+		&._float-r {
+			float: right;
+			margin: 13px 17px 0 0;
+			font-style: italic;
+		}
 	}
 	&__type {
 		margin-bottom: 45px;
@@ -1607,6 +1616,18 @@
 		outline: none;
 		font-weight: bold;
 		text-transform: uppercase;
+	}
+	&__input {
+		height: 38px;
+		padding: 0 15px;
+		box-sizing: border-box;
+		width: 100%;
+		color: #999;
+		border-radius: 5px;
+		outline: none;
+		font-weight: bold;
+		text-transform: uppercase;
+		border: 1px solid #949492;
 	}
 	&__table-item {
 		vertical-align: top;
