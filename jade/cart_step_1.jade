@@ -1,0 +1,83 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			.cart__header
+				ul.cart__header-list.list-inline
+					li.cart__header-item.active
+						p.cart__header-title 1. Список товаров
+						p.cart__header-text То что вы добавили в корзину
+					li.cart__header-item
+						p.cart__header-title 2. Оформление заказа
+						p.cart__header-text Доставка и способ оплаты
+					li.cart__header-item
+						p.cart__header-title 3. Подтверждение заказа
+						p.cart__header-text Все верно? Заказываем!
+				table.order__table
+					tbody.order__table-body
+						tr.order__line
+							th.order__table-title Товар
+							th.order__table-title Цвет
+							th.order__table-title._text-c Размер
+							th.order__table-title._text-c Количество
+							th.order__table-title Цена
+							th.order__table-title 
+						tr.order__line
+							td.order__cell._goods-W
+								a.order__link(href="#")
+									img.order__img(src="img/content/order_thumb.jpg", alt="")
+									p.order__title._sizeL zara кеды leather good best keds color green
+								span.order__option._margl Без коробки
+							td.order__cell
+								img.order__color(src="img/green.png", alt="")
+							td.order__cell._text-c
+								p.order__size 39
+							td.order__cell._text-c
+								span.order__btn._down
+								input.order__input(type="text" readonly value="1" maxlength="3")
+								span.order__btn._up
+							td.order__cell._cost._right
+								p.order__price 890 
+									span.order__currency грн.
+							td.order__cell
+								.order__delete
+						tr.order__line
+							td.order__cell._goods-W
+								a.order__link(href="#")
+									img.order__img(src="img/content/order_thumb.jpg", alt="")
+									p.order__title._sizeL zara кеды leather good best keds color green
+								span.order__option._margl Без коробки
+							td.order__cell
+								img.order__color(src="img/white.png", alt="")
+							td.order__cell._text-c
+								p.order__size 39
+							td.order__cell._text-c
+								span.order__btn._down
+								input.order__input(type="text" readonly value="1" maxlength="3")
+								span.order__btn._up
+							td.order__cell._cost._right
+								p.order__price 890 
+									span.order__currency грн.
+							td.order__cell
+								.order__delete
+					tfoot
+						tr.order__line._v-align
+							td.order__cell(colspan="2")
+								p.attention._marg Чтобы была учтена ваша скидка 
+									a.attention__link(href="#") войдите в профиль
+							td.order__cell._right(colspan="2")
+								p.order__text Всего:
+								p.order__text._italic Ваша скидка (3%):
+								p.order__text._italic Сумма личного счёта:
+								p.order__text._total Итого:
+							td.order__cell._right
+								p.order__text._strong 1890 
+									span.order__currency._sizeM грн.
+								p.order__text._italic._strong - 150 
+									span.order__currency._sizeM грн.
+								p.order__text._italic._strong - 900 
+									span.order__currency._sizeM грн.
+								p.order__text._sizeL 1 340 
+									span.order__currency грн.
+				.text-center
+					a.button._see-more(href="#") к оформлению

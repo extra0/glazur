@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('.header__phone-link').click(function() {
 		$(this).parent().hide();
 		$('.header__phone-image').hide();
-		$(this).parent().parent().find('.hide').slideDown(500);
+		$(this).parents('.header__phone-block').find('.hide').slideDown(500);
 		return false;
 	});
 
@@ -106,7 +106,6 @@ $(document).ready(function() {
 			});
 	});
 
-
 	// кастомный скролл в фильтре
 	(function($) {
 		$(window).load(function() {
@@ -114,11 +113,10 @@ $(document).ready(function() {
 		});
 	})(jQuery);
 
-	// меняем блоки в разделе интересного
+	// меняем блоки в разделе интересного в футере
 	var i = 1,
 		block = $('.intresting__inner'),
 		num = block.length;
-
 	$('.intresting__changer').click(function(event) {
 		if (i < num) {
 			block.eq(i - 1).removeClass('active');
@@ -131,5 +129,119 @@ $(document).ready(function() {
 		}
 		return false;
 	});
+
+	//---------  корзина 
+
+		$(function() {
+			// Калькулятор
+			function calculate(el, btn) {
+
+				// Запоминаем данные
+				//-----------------------------------------------------------------------------------------------------------------         
+				var priceAtribut = 'data-val'; // Атрибут с ценами у блоков
+				var cartTotal = $('.total_price p'); // Елемент
+
+				var elem = {
+					parentModule: $(el).parents('cart'), // Родительский блок корзины
+					btn: $(btn), // Текущая кнопка которая была нажата
+					inpt: $(el).find('.input-counts'), // Инпут с количеством
+					inptMinVal: $(el).find('.input-counts').data('min-val'), // NEW Минимальное количество
+					inptMaxVal: $(el).find('.input-counts').data('max-val'), // NEW Максимальное количество
+					priceBase: $(el).find('.string-elem-price-base'), // Базовая цена товара
+					priceTotal: $(el).find('.string-elem-price-total'), // Общая сумма товара
+				};
+
+				//функция: проверка количества товаров, если к-во = 0, прекращаем работу скрипта
+				//-----------------------------------------------------------------------------------------------------------------
+				(function checkCounts() {
+					if(elem.btn.hasClass(elem.inpt.attr('class'))) { // NEW
+						elem.inpt.attr('data-val',elem.inpt.val()); // NEW
+						var thisCounts = (elem.btn.val() - 0); // NEW
+						if(elem.inpt.val() < elem.inptMinVal) { // NEW
+							elem.inpt.val(elem.inptMinVal) // NEW
+						} // NEW
+					}  else { // NEW
+						var thisCounts = (elem.inpt.val() - 0) + (elem.btn.attr(priceAtribut) - 0);
+					}
+					
+					if (elem.btn != null && thisCounts >= elem.inptMinVal && thisCounts <= elem.inptMaxVal) {
+						goCheck(thisCounts)
+					} 
+				}());
+
+				(function delItem() {
+					if (btn == null) {
+						var	a=el.find('.cartdel').data('a'),
+							id=el.find('.cartdel').data('id'),
+							type=el.find('.cartdel').data('t');
+						if (confirm(a)) {
+							$.ajax
+							    ({
+							        type: "POST",
+							        url: "/cartdel/",
+							        data: {
+							            id:id,
+							            type:type,
+							        },
+							        cache: false,
+							        async: false,
+							        success: function(result)
+							        {   
+							        	console.log(result);
+							        }
+							    })
+							el.remove();
+							checkTotalSumm();
+						}
+						else {
+							return false;
+						}
+					}
+				}());
+
+				//функция: Калькуляции и пересчета!
+				//-----------------------------------------------------------------------------------------------------------------
+				function goCheck(counts) {
+
+					// Запись количества в инпут текущего товара
+					elem.inpt.val(counts);
+					// Запись общей суммы текущего товара, исходя из количества             
+					elem.priceTotal.html(numberWithCommas(Math.ceil(counts * (elem.priceBase.attr(priceAtribut) - 0)*100)/100));
+					// Запись общей суммы текущего товара, исходя из количества в атрибут datavalue 
+					elem.priceTotal.attr(priceAtribut, counts * (elem.priceBase.attr(priceAtribut) - 0));
+
+					checkTotalSumm();
+					$('#total').attr('data-t', number_norm($('.total_price p').html()));
+				}
+
+				// Функция которая делает общий пересчет общей суммы каждого товара, и записывает результат.
+				//-----------------------------------------------------------------------------------------------------------------
+				function checkTotalSumm() {
+					var totalSumm = 0;
+					$('.' + elem.priceTotal.attr('class')).each(function() {
+						totalSumm += $(this).attr(priceAtribut) - 0;
+					});
+					cartTotal.html(numberWithCommas(Math.ceil(totalSumm * 100)/100));
+				}
+
+				// удаляем пробелы из строки
+				function number_norm( str ) {
+					return str.replace(/\s+/g, '');
+				}
+
+			}
+
+			// Запуск функции калькулятора
+			$('.number button').click(function() {
+				calculate($(this).parents('.item'), this);
+			});
+			$('.loot_input').change(function() {
+				calculate($(this).parents('.item'), this);
+			});
+			$('td.delete span').click(function() {
+				calculate($(this).parents('.item'), null);
+			});
+
+		});
 
 });

@@ -262,7 +262,7 @@
 		background-image: url(../img/big_shadow.png);
 		background-position: top center;
 		background-repeat: no-repeat;
-		padding: 41px 15%;
+		padding: 41px 3% 41px 15%;
 		-webkit-transition: all 0.4s ease;
 		-o-transition: all 0.4s ease;
 		-moz-transition: all 0.4s ease;
@@ -287,7 +287,7 @@
 		}
 	}
 	&__bestseller-link {
-		display: inline-block;
+		display: block;
 		font-size: 29px;
 		color: #3262db;
 		margin-bottom: 8px;
@@ -304,6 +304,24 @@
 		vertical-align: top;
 		margin: 0 24px 0 0;
 		display: inline-block;
+		&._old {
+			color: #999;
+			font-size: 24px;
+			margin: 12px 10px 0 -18px;
+			position: relative;
+			&:before {
+				width: 88%;
+				height: 1px;
+				content: '';
+				position: absolute;
+				background: #f00;
+				top: 16px;
+				left: -6px;
+				transform: rotate(-12deg);
+				-ms-transform: rotate(-12deg);
+				-webkit-transform: rotate(-12deg);
+			}
+		}
 	}
 	&__bestseller-currency {
 		font-weight: normal;
@@ -383,12 +401,14 @@
 	transition: opacity 0.4s ease;
 	&:hover {
 		opacity: 0.8;
+		color: #fff;
 	}
 	// кнопка показать еще 
 	&._see-more {
 		line-height: 68px;
 		width: 270px;
 		margin: 30px 0 30px 0;
+		display: inline-block;
 	}
 	//  кнопка submit в модальном 
 	&._submit {
@@ -1002,13 +1022,22 @@
 	}
 	&__table {
 		width: 100%;
+		margin-bottom: 40px;
 	}
 	&__cell {
-		padding: 10px 0;
+		padding: 17px 0;
 		&._text-r { text-align: right;}
 		&._text-c {	text-align: center;}
-		&:first-child {	width: 38%;}
-		&:last-child {	width: 19%;}
+		&._goods {	width: 38%;}
+		&._goods-W { width: 41%;}
+		&._cost {	width: 19%;}
+		&._right {
+			padding-right: 6%;
+			text-align: right;
+		}
+		&._v-align {
+			vertical-align: top;
+		}
 	}
 	&__head-text {
 		font-style: italic;
@@ -1075,12 +1104,19 @@
 		margin: 10px 0 6px 100px;
 		line-height: 22px;
 		text-transform: uppercase;
+		&._sizeL {
+			font-size: 16px;
+			margin: 10px 40px 6px 120px;
+		}
 	}
 	&__option {
 		color: #666;
 		font-weight: 300;
 		display: block;
 		margin-left: 100px;
+		&._margl {
+			margin-left: 120px;
+		}
 	}
 	&__img {
 		border-radius: 10px;
@@ -1093,9 +1129,7 @@
 		width: 31px;
 		height: 31px;
 		border-radius: 5px;
-		&._green {background: #00a651;}
-		&._red {background: #e30613;}
-		&._blue {background: #312783;}
+		display: inline-block;
 	}
 	&__size,
 	&__quantity {
@@ -1109,6 +1143,9 @@
 	&__currency {
 		font-size: 20px;
 		font-weight: normal;
+		&._sizeM {
+			font-size: 14px;
+		}
 	}
 	&__total-text {
 		font-size: 16px;
@@ -1119,6 +1156,66 @@
 	&__total {
 		text-align: right;
 		margin: 15px 5.5%;
+	}
+	&__delete {
+		width: 14px;
+		height: 14px;
+		background: url(../img/main_sprite.png) -227px -30px no-repeat;
+		margin: 13px auto 0px auto;
+		cursor: pointer;
+	}
+	&__input {
+		border: 1px solid #a7a7a7;
+		width: 39px;
+		box-sizing: border-box;
+		height: 39px;
+		border-radius: 4px;
+		margin: 0 8px 0 7px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 800;
+		color: #939393;
+	}
+	&__btn {
+		color: #fff;
+		font-weight: 800;
+		background: url(../img/buttons.png) 0 0 no-repeat;
+		width: 29px;
+		height: 29px;
+		font-size: 20px;
+		cursor: pointer;
+		display: inline-block;
+		text-align: center;
+		position: relative;
+		top: 10px;
+		&._up {background-position: -238px -81px;}
+		&._down {background-position: -204px -81px;}
+	}
+	&__text {
+		font-size: 18px;
+		margin: 0 0 5px 0;
+		&._strong {
+			font-weight: bold;
+		}
+		&._italic {
+			font-style: italic;
+			color: #4e4e4e;
+		}
+		&._total {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		&._sizeL {
+			font-size: 36px;
+			font-weight: bold;
+			margin-top: 18px;
+		}
+	}
+	&__line {
+		&._v-align {
+			vertical-align: top;
+		}
 	}
 }
 
@@ -1249,5 +1346,59 @@
 		text-align: center;
 		background: #eceae1;
 		border-radius: 0 0 15px 15px;
+	}
+}
+
+//  блок шагов в корзине
+.cart {
+	&__header-list {
+		margin: 50px 0 137px 58px;
+	}
+	&__header-item {
+		text-align: left;
+		margin: 0 0  0 8%;
+		position: relative;
+		opacity: 0.4;
+		&.active {
+			opacity: 1;
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) -420px -89px no-repeat;
+			width: 60px;
+			height: 68px;
+			top: 0;
+			right: -80px;
+		}
+		&:last-child {
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&__header-title {
+		font-size: 24px;
+		color: #350a35;
+		margin: 0 0 10px 0;
+	}
+	&__header-text {
+		color: #878787;
+		margin: 0;
+	}
+	&__table {
+		width: 100%;
+	}
+	&__table-line {
+		border-bottom: 1px solid #dddedf;
+	}
+	&__table-title {
+		padding: 10px 0;
+		color: #333;
+		font-size: 16px;
+		text-align: left;
+	}
+	&__table-item {
+		padding: 10px 0;
 	}
 }

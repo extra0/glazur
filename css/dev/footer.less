@@ -40,8 +40,6 @@
 		display: inline-block;
 		width: 222px;
 		box-sizing: border-box;
-		height: 48px;
-		overflow: hidden;
 	}
 	&__title {
 		font-family: 'Flow';
@@ -90,7 +88,7 @@
 		float: left;
 	}
 	&__text {
-		margin: 0 5px 0 49px;
+		margin: 3px 5px 0 49px;
 		color: #801fea;
 		font-size: 11px;
 		text-transform: uppercase;
@@ -99,6 +97,8 @@
 	}
 	&__inner {
 		display: none;
+		height: 32px;
+		overflow: hidden;
 		&.active {
 			display: block;
 		}
