@@ -72,21 +72,15 @@ $(document).ready(function() {
 	//  стилизация чекбоксов и селектов
 	$('.checkbox, select').styler();
 
-	//  клонирование элементов для функции полета
-	function cloneImg() {
-		$('.goods__item-link').each(function(){
-			$(this).children('img:first-child').clone().css({
-				'visibility': 'hidden',
-				'position': 'absolute'
-			}).removeAttr('class').appendTo('a._cart');
-		});
-		// $('a._cart img:first-child').addClass('fly');
-		// $('a._cart').children().not('.fly').remove();
-	}
-	cloneImg();
-
 	// полет товара в корзину
 	$("a._cart").click(function() {
+		// клонирование картинки для полета
+		$(this).parent().parent().find('.goods__item-link img:not(._not-active)').clone().css({
+			'visibility': 'hidden',
+			'position': 'absolute'
+		}).removeAttr('class').appendTo($(this));
+
+		// обработка полета
 		$("html, body").animate({
 			scrollTop: 0
 		}, 1000)
