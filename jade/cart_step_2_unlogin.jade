@@ -49,13 +49,13 @@ block content
 						p.order__text._italic + Доставка
 						p.order__text._total Итого:
 					.order__foot-block
-						p.order__text._strong 1890 
+						p.order__text._strong 1 890 
 							span.order__currency._sizeM грн.
 						p.order__text._italic._strong - 150 
 							span.order__currency._sizeM грн.
 						p.order__text._italic._strong - 900 
 							span.order__currency._sizeM грн.
-						p.order__text._italic._strong 60
+						p.order__text._italic._strong 60 
 							span.order__currency._sizeM грн.
 						p.order__text._sizeL 1 340 
 							span.order__currency грн.
@@ -178,15 +178,20 @@ block content
 												p.formalization__table-text._strong Электронный адрес
 											td.formalization__table-item
 												input.formalization__input(type="email" required)
+										tr.formalization__table-line
+											td.formalization__table-item
+												p.formalization__table-text._strong Пароль
+											td.formalization__table-item
+												input.formalization__input(type="password" required)
 												label.modal__label 
-													input.modal__input.checkbox(type="checkbox")
-													| Запомнить меня
+													input.modal__input.checkbox(type="checkbox" checked)
+													| Подписаться на новости
 								.formalization__footer
 									table.formalization__table
 										tbody
 											tr.formalization__table-line
 												td.formalization__table-item
 												td.formalization__table-item
-													button.button._see-more(type="submit") Вход
+													button.button._see-more(type="submit") Подтвердить заказ
 				.clear
 					

@@ -23,11 +23,15 @@
 		display: inline-block;
 		width: 22%;
 		position: relative;
-		left: -20px;
+		left: 20px;
+		&._product {
+			width: 19%;
+			left: 0;
+		}
 	}
 	&__list {
 		list-style-type: none;
-		padding: 0 0 0 30px;
+		padding: 0;
 		margin: 30px 0;
 	}
 	&__image-wrap {
@@ -44,11 +48,21 @@
 		color: #333;
 		margin: 0;
 		margin-left: 38%;
+		font-weight: bold;
+		&._product {
+			margin-left: 44%;
+		}
+		&._prod-marg {
+			margin: 0 0 15px 0;
+		}
 	}
 	&__text {
 		color: #666;
 		font-weight: 300;
 		margin-left: 38%;
+		&._product {
+			margin-left: 44%;
+		}
 	}
 }
 
@@ -58,6 +72,11 @@
 		border-top: 2px solid #000;
 		position: relative;
 		margin-bottom: 50px;
+		&._border-b {
+			border-bottom: 2px solid #000;
+			padding-bottom: 70px;
+			margin-bottom: -30px;
+		}
 	}
 	&__title-wrap {
 		text-align: center;
@@ -273,6 +292,7 @@
 		font-size: 18px;
 		position: relative;
 		text-indent: 24px;
+		display: inline-block;
 		margin: 0 0 7px 0;
 		&:before {
 			position: absolute;
@@ -285,6 +305,10 @@
 		}
 		&._delivery:before {
 			background-position: -172px -308px;
+		}
+		&._product {
+			margin: 0;
+			color: #8b8b8b;
 		}
 	}
 	&__bestseller-link {
@@ -628,6 +652,9 @@
 .breadcrumbs {
 	&__list {
 		margin: 0 0 53px 0;
+		&._marg-non {
+			margin: 0;
+		}
 	}
 	&__item {
 		position: relative;
@@ -1679,5 +1706,63 @@
 		&._strong {
 			font-weight: bold;
 		}
+	}
+}
+
+// страница товара
+.product {
+	&__section {}
+	&__description {
+		margin: 57px 0 110px 0;
+	}
+	&__text {
+		font-size: 16px;
+		color: #333;
+		margin: 0;
+		line-height: 28px;
+	}
+	&__image-block {
+		display: inline-block;
+		width: 44%;
+		vertical-align: top;
+		height: 570px;
+		margin-right: 3%;
+	}
+	&__image {
+		display: block;
+		margin: auto;
+	}
+	&__info {
+		display: inline-block;
+		vertical-align: top;
+		width: 33%;
+	}
+	&__title {
+		margin: 0 0 15px 0;
+		font-size: 34px;
+		font-weight: normal;
+	}
+	&__have {
+		font-size: 18px;
+		position: relative;
+		text-indent: 24px;
+		color: #8b8b8b;
+		display: inline-block;
+		margin: 5px 0 0 8px;
+		&:before {
+			position: absolute;
+			content: '';
+			background: url(../img/main_sprite.png) -203px -308px no-repeat;
+			width: 21px;
+			height: 18px;
+			top: 3px;
+			left: 0;
+		}
+		&._delivery:before {
+			background-position: -172px -308px;
+		}
+	}
+	&__info-text {
+		margin: 30px 0 70px 0;
 	}
 }

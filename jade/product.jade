@@ -1,0 +1,119 @@
+extends _layout
+block content
+	.content
+		.container-fluid
+			ul.breadcrumbs__list.list-inline._marg-non
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Главная
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Мужчинам
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Обувь
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Кроссовки и кеды
+				li.breadcrumbs__item
+					p.breadcrumbs__active Обувь
+			.product__section
+				.advantages__block._product
+					img.advantages__image(src="img/content/brand_logo.jpg", alt="")
+					ul.advantages__list
+						li.advantages__item
+							.advantages__image-wrap
+								img.advantages__image(src="img/product_adv_1.png", alt="")
+							h3.advantages__title._product Только модные новинки
+							p.advantages__text._product возможность бесплатной доставки
+						li.advantages__item
+							.advantages__image-wrap
+								img.advantages__image(src="img/product_adv_2.png", alt="")
+							h3.advantages__title._product Гарантия безопасности
+							p.advantages__text._product оплата наличными в момент доставки
+						li.advantages__item
+							.advantages__image-wrap
+								img.advantages__image(src="img/product_adv_3.png", alt="")
+							h3.advantages__title._product Магазин в Одессе
+							p.advantages__text._product возможность примерки и самовывоза
+						li.advantages__item
+							.advantages__image-wrap
+								img.advantages__image(src="img/product_adv_4.png", alt="")
+							h3.advantages__title._product Дисконтная система
+							p.advantages__text._product полное возмещение стоимости товара
+					p.advantages__title._prod-marg Поделиться
+					.yashare-auto-init._product(data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki" data-yashareTheme="counter")
+				.product__image-block
+					.product__image-wrap
+						img.product__image(src="img/content/boots.jpg", alt="")
+				.product__info
+					h1.product__title Converse ALL STAR low
+					p.attention._marg._sizeL Код товара: 02350 
+					p.product__have._delivery Доставка 2-3 недели
+					p.product__info-text Обувь Converse поможет вам ощутить себя в центре внимания.
+					.product__options
+						label.product__label Цвет
+						label.product__option-wrap
+							input.product__input(type="radio" name="color")
+							img.product__option-img(src="img/green.png", alt="")
+						label.product__option-wrap
+							input.product__input(type="radio" name="color")
+							img.product__option-img(src="img/green.png", alt="")
+						label.product__option-wrap
+							input.product__input(type="radio" name="color")
+							img.product__option-img(src="img/green.png", alt="")
+						label.product__option-wrap
+							input.product__input(type="radio" name="color")
+							img.product__option-img(src="img/green.png", alt="")
+						label.product__option-wrap
+							input.product__input(type="radio" name="color")
+							img.product__option-img(src="img/green.png", alt="")
+						label.product__option-wrap
+							input.product__input(type="radio" name="color")
+							img.product__option-img(src="img/green.png", alt="")
+			.clear
+			.product__description
+				p.product__text Chuck Taylor All-Star (также «ко́нверсы», Converse All-Star) — знаменитые кеды фирмы «Converse», которую основал Маркус Миллс Конверс (англ. Marquis Mills Converse) в 1908 году. Впервые эти кеды появились в баскетбольных магазинах в 1917 году — тогда они назывались просто All-Star. Поначалу кеды не были особо популярны, пока их не заметил баскетболист Чак Тейлор (Chuck Taylor).
+			.goods__section._border-b
+				.goods__title-wrap
+					h2.goods__title Рекомендованные товары
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="img/content/goods.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods_2.jpg", alt="")
+					.goods__footer
+						p.goods__info Есть в наличии
+						a.goods__link(href="#") Куртка PAUL&Shark
+						p.goods__price 1 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
+				.goods__item
+					a.goods__item-link(href="#")
+						img.goods__image(src="img/content/goods_2.jpg", alt="")
+						img.goods__image._not-active(src="img/content/goods.jpg", alt="")
+					.goods__footer
+						p.goods__info._delivery Доставка 2-3 недели
+						a.goods__link(href="#") Куртка GUCCI
+						p.goods__price 3 260 
+							span.goods__currency грн
+						a.goods__button._cart(href="#")
+						a.goods__button._favorite(href="#")
