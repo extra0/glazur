@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 1110px) {
 	// настройка главной страницы
 	// залогиненый 
 	.enter__block {
@@ -77,6 +77,11 @@
 	.goods {
 		&__item {
 			width: 28%;
+			&._blog-in {
+				.goods__footer {
+					padding: 20px 0 20px 0px;
+				}
+			}
 		}
 		&__bestseller {
 			width: 57%;
@@ -177,5 +182,26 @@
 	}
 
 	// блог
-
+	.blog {
+		&__list {
+			width: 100%;
+			&:nth-child(3) {
+				margin: 0;
+			}
+		}
+		&__item {
+			padding-bottom: 60px;
+			&:after {
+				content: '';
+				display: block;
+				height: 0;
+				overflow: hidden;
+				clear: both;
+			}
+		}
+		&__image {
+			float: left;
+			margin: 0 25px 5px 0;
+		}
+	}
 }

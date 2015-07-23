@@ -434,6 +434,13 @@
 	&__item {
 		border-bottom: 1px solid #e0e0e1;
 		padding: 7px 25px;
+		&:after {
+			content:'';
+			display:block;
+			height:0;
+			overflow:hidden;
+			clear:both;
+		}
 	}
 	&__image-wrap {
 		float: left;
