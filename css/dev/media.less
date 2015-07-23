@@ -47,6 +47,9 @@
 		&__block {
 			float: none;
 			width: 100%;
+			&._product {
+				width: 100%;
+			}
 		}
 		&__list {
 			margin: 10px 0 60px 0;
@@ -69,9 +72,19 @@
 		&__title {
 			margin-left: 0;
 			min-height: 44px;
+			&._product {
+				margin-left: 0;
+			}
+			&._prod-marg {
+				margin: 0 9px -21px 0;
+			    display: inline-block;
+			}
 		}
 		&__text {
 			margin-left: 0;
+			&._product {
+				margin-left: 0;
+			}
 		}
 	}
 	.goods {
@@ -81,6 +94,9 @@
 				.goods__footer {
 					padding: 20px 0 20px 0px;
 				}
+			}
+			&._catalog {
+				width: 27%;
 			}
 		}
 		&__bestseller {
@@ -202,6 +218,136 @@
 		&__image {
 			float: left;
 			margin: 0 25px 5px 0;
+		}
+	}
+
+	// корзина шаг 1
+	.cart {
+		&__header-list {
+			margin: 50px 0 137px -20px;
+		}
+		&__header-item {
+			&:before {
+				right: -61px;
+			}
+		}
+		&__header-title {
+			font-size: 20px;
+		}
+	}
+	.order {
+		&__price {
+			font-size: 28px;
+		}
+		&__cell {
+			&._right {
+				padding-right: 3%;
+			}
+			&._cost {
+				width: 24%;
+			}
+		}
+		&__text {
+			&._sizeL {
+				font-size: 28px;
+				margin-top: 26px;
+			}
+			font-size: 14px;
+		}
+		&__table-title {
+			font-size: 14px;
+		}
+	}
+
+	// корзина шаг 2 
+	.formalization {
+		&__label {
+			font-size: 13px;
+			vertical-align: middle;
+		}
+		&__text {
+			&._light {
+				font-size: 13px;
+			}
+			font-size: 13px;
+		}
+		&__table-text {
+			font-size: 14px;
+		}
+		&__table-item {
+			&:first-child {
+				width: 33%;
+			}
+		}
+		&__link {
+			&._float-r {
+				float: none;
+				position: relative;
+				margin: 0;
+				top: -20px;
+			}
+		}
+	}
+
+	// корзина шаг 3
+	.confirm__block {
+		width: 57%;
+	}
+
+	// страница контактов 
+	.contacts {
+		&__phones {
+			font-size: 18px;
+			margin: 0;
+		}
+	}
+
+	// сайтбар 
+	.sidebar {
+		width: 265px;
+		&__blog-title {
+			font-size: 13px;
+			line-height: 18px;
+		}
+	}
+
+	// главный контент
+	.main__section {
+		margin-left: 305px;
+		&._catalog {
+			margin-left: -18px;
+			margin-right: -18px;
+		}
+	}
+
+	// блок фитрации в каталоге
+	.filter {
+		&__block {
+			width: 100%;
+		}
+		&__input {
+			width: 96px;
+		}
+		&__availability {
+			font-size: 12px;
+		}
+	}
+
+	// сортировка
+	.sorting {
+		&__block {
+			margin: 15px 39px 0 0;
+		}
+	}
+
+	// страница продукта
+	.product {
+		&__image-block {
+			width: 50%;
+			margin-right: 4%;
+		}
+		&__info {
+			width: 44%;
 		}
 	}
 }
