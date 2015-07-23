@@ -46,8 +46,7 @@
               <li class="univ__item"><a href="#" class="univ__link">О магазине</a></li>
             </ul>
             <div class="enter__block">
-              <p class="enter__text _login">Привет, Катя!</p>
-              <!-- <a href="#" class="enter__link enter fancy">Вход</a>--><a href="#" class="enter__link profile">Профиль</a><a href="#" class="enter__link exit">Выйти</a>
+              <p class="enter__text">Добро пожаловать!</p><a href="#" class="enter__link enter fancy">Вход</a>
               <div class="modal__window">
                 <div class="modal__block tabs">
                   <ul class="modal__list list-inline">
@@ -220,11 +219,11 @@
                   <td class="order__cell _text-c">
                     <p class="order__size">39</p>
                   </td>
-                  <td class="order__cell _text-c"><span class="order__btn _down"></span>
-                    <input type="text" readonly value="1" maxlength="3" class="order__input"><span class="order__btn _up"></span>
+                  <td class="order__cell _text-c"><span data-val="-1" class="order__btn _down"></span>
+                    <input type="text" readonly value="1" maxlength="3" data-min-val="1" class="order__input"><span data-val="1" class="order__btn _up"></span>
                   </td>
                   <td class="order__cell _cost _right">
-                    <p class="order__price">890 <span class="order__currency">грн.</span></p>
+                    <p data-val="890" class="order__price num_format">890 <span class="order__currency">грн.</span></p>
                   </td>
                   <td class="order__cell">
                     <div class="order__delete"></div>
@@ -237,11 +236,11 @@
                   <td class="order__cell _text-c">
                     <p class="order__size">39</p>
                   </td>
-                  <td class="order__cell _text-c"><span class="order__btn _down"></span>
-                    <input type="text" readonly value="1" maxlength="3" class="order__input"><span class="order__btn _up"></span>
+                  <td class="order__cell _text-c"><span data-val="-1" class="order__btn _down"></span>
+                    <input type="text" readonly value="1" maxlength="3" data-min-val="1" class="order__input"><span data-val="1" class="order__btn _up"></span>
                   </td>
                   <td class="order__cell _cost _right">
-                    <p class="order__price">890 <span class="order__currency">грн.</span></p>
+                    <p data-val="290" class="order__price num_format">290 <span class="order__currency">грн.</span></p>
                   </td>
                   <td class="order__cell">
                     <div class="order__delete"></div>
@@ -260,10 +259,10 @@
                     <p class="order__text _total">Итого:</p>
                   </td>
                   <td class="order__cell _right">
-                    <p class="order__text _strong">1890 <span class="order__currency _sizeM">грн.</span></p>
-                    <p class="order__text _italic _strong">- 150 <span class="order__currency _sizeM">грн.</span></p>
-                    <p class="order__text _italic _strong">- 900 <span class="order__currency _sizeM">грн.</span></p>
-                    <p class="order__text _sizeL">1 340 <span class="order__currency">грн.</span></p>
+                    <p id="price_total" data-val="1890" class="order__text _strong num_format">1 890 <span class="order__currency _sizeM">грн.</span></p>
+                    <p class="order__text _italic _strong num_format">- 150 <span class="order__currency _sizeM">грн.</span></p>
+                    <p class="order__text _italic _strong num_format">- 900 <span class="order__currency _sizeM">грн.</span></p>
+                    <p id="total" class="order__text _sizeL num_format">1 340 <span class="order__currency">грн.</span></p>
                   </td>
                 </tr>
               </tfoot>

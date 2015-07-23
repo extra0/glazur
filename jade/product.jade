@@ -48,25 +48,81 @@ block content
 					p.product__have._delivery Доставка 2-3 недели
 					p.product__info-text Обувь Converse поможет вам ощутить себя в центре внимания.
 					.product__options
-						label.product__label Цвет
-						label.product__option-wrap
-							input.product__input(type="radio" name="color")
-							img.product__option-img(src="img/green.png", alt="")
-						label.product__option-wrap
-							input.product__input(type="radio" name="color")
-							img.product__option-img(src="img/green.png", alt="")
-						label.product__option-wrap
-							input.product__input(type="radio" name="color")
-							img.product__option-img(src="img/green.png", alt="")
-						label.product__option-wrap
-							input.product__input(type="radio" name="color")
-							img.product__option-img(src="img/green.png", alt="")
-						label.product__option-wrap
-							input.product__input(type="radio" name="color")
-							img.product__option-img(src="img/green.png", alt="")
-						label.product__option-wrap
-							input.product__input(type="radio" name="color")
-							img.product__option-img(src="img/green.png", alt="")
+						form.product__form(action="#" method="post")
+							.product__block-option
+								label.product__label Цвет
+								label.product__option-wrap
+									input.product__input(type="radio" name="color" checked)
+									img.product__option-img(src="img/green.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/white.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/red.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/green.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/green.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/green.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/red.png", alt="")
+								label.product__option-wrap
+									input.product__input(type="radio" name="color")
+									img.product__option-img(src="img/green.png", alt="")
+							.product__block-option
+								label.product__label Размер
+								label.product__option-wrap
+									input.product__input(type="radio" name="size" checked)
+									span.product__size 36
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 37
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 38
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 39
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 40
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 38
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 39
+								label.product__option-wrap
+									input.product__input(type="radio" name="size")
+									span.product__size 40
+								a.product__link.fancy(href="/img/content/setka.jpg") Размерная<br>сетка
+								label.modal__label 
+									input.modal__input.checkbox(type="checkbox")
+									| Могу ошибаться с размером
+							.product__block-option
+								label.product__label Комплектация
+								select.formalization__select.select
+									option(value="1") Кеды в коробке
+									option(value="1") Кеды в коробке 12
+									option(value="1") Кеды в коробке3 
+									option(value="1") Кеды в коробке5 15
+									option(value="1") Кеды в коробке4
+									option(value="1") Кеды в коробке 51
+							.product__footer
+								.product__price-block
+									p.product__price 1 390 
+										span.product__currency грн
+									p.product__price._old 1 690 
+										span.product__currency._old грн
+								.product__cart-block
+									a.button._to-cart(href="#") в корзину
+									a.product__favorite(href="#") Добавить в<br>список желаний
 			.clear
 			.product__description
 				p.product__text Chuck Taylor All-Star (также «ко́нверсы», Converse All-Star) — знаменитые кеды фирмы «Converse», которую основал Маркус Миллс Конверс (англ. Marquis Mills Converse) в 1908 году. Впервые эти кеды появились в баскетбольных магазинах в 1917 году — тогда они назывались просто All-Star. Поначалу кеды не были особо популярны, пока их не заметил баскетболист Чак Тейлор (Chuck Taylor).

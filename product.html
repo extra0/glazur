@@ -46,8 +46,7 @@
               <li class="univ__item"><a href="#" class="univ__link">О магазине</a></li>
             </ul>
             <div class="enter__block">
-              <p class="enter__text _login">Привет, Катя!</p>
-              <!-- <a href="#" class="enter__link enter fancy">Вход</a>--><a href="#" class="enter__link profile">Профиль</a><a href="#" class="enter__link exit">Выйти</a>
+              <p class="enter__text">Добро пожаловать!</p><a href="#" class="enter__link enter fancy">Вход</a>
               <div class="modal__window">
                 <div class="modal__block tabs">
                   <ul class="modal__list list-inline">
@@ -233,25 +232,83 @@
               <p class="product__have _delivery">Доставка 2-3 недели</p>
               <p class="product__info-text">Обувь Converse поможет вам ощутить себя в центре внимания.</p>
               <div class="product__options">
-                <label class="product__label">Цвет</label>
-                <label class="product__option-wrap">
-                  <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
-                </label>
-                <label class="product__option-wrap">
-                  <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
-                </label>
-                <label class="product__option-wrap">
-                  <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
-                </label>
-                <label class="product__option-wrap">
-                  <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
-                </label>
-                <label class="product__option-wrap">
-                  <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
-                </label>
-                <label class="product__option-wrap">
-                  <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
-                </label>
+                <form action="#" method="post" class="product__form">
+                  <div class="product__block-option">
+                    <label class="product__label">Цвет</label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" checked class="product__input"><img src="img/green.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/white.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/red.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/red.png" alt="" class="product__option-img">
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="color" class="product__input"><img src="img/green.png" alt="" class="product__option-img">
+                    </label>
+                  </div>
+                  <div class="product__block-option">
+                    <label class="product__label">Размер</label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" checked class="product__input"><span class="product__size">36</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">37</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">38</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">39</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">40</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">38</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">39</span>
+                    </label>
+                    <label class="product__option-wrap">
+                      <input type="radio" name="size" class="product__input"><span class="product__size">40</span>
+                    </label><a href="/img/content/setka.jpg" class="product__link fancy">Размерная<br>сетка</a>
+                    <label class="modal__label"> 
+                      <input type="checkbox" class="modal__input checkbox">Могу ошибаться с размером
+                    </label>
+                  </div>
+                  <div class="product__block-option">
+                    <label class="product__label">Комплектация</label>
+                    <select class="formalization__select select">
+                      <option value="1">Кеды в коробке</option>
+                      <option value="1">Кеды в коробке 12</option>
+                      <option value="1">Кеды в коробке3 </option>
+                      <option value="1">Кеды в коробке5 15</option>
+                      <option value="1">Кеды в коробке4</option>
+                      <option value="1">Кеды в коробке 51</option>
+                    </select>
+                  </div>
+                  <div class="product__footer">
+                    <div class="product__price-block">
+                      <p class="product__price">1 390 <span class="product__currency">грн</span></p>
+                      <p class="product__price _old">1 690 <span class="product__currency _old">грн</span></p>
+                    </div>
+                    <div class="product__cart-block"><a href="#" class="button _to-cart">в корзину</a><a href="#" class="product__favorite">Добавить в<br>список желаний</a></div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

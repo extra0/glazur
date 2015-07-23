@@ -2,6 +2,18 @@ extends _layout
 block content
 	.content
 		.container-fluid
+			
+			.slider__block
+				ul.slider__wrap
+					li.slider__item
+						a.slider__link(href="#")
+							img.slider__image(src="img/content/slide_img.jpg", alt="")
+					li.slider__item
+						a.slider__link(href="#")
+							img.slider__image(src="img/content/slide_img.jpg", alt="")
+					li.slider__item
+						a.slider__link(href="#")
+							img.slider__image(src="img/content/slide_img.jpg", alt="")
 			.advantages__block
 				ul.advantages__list
 					li.advantages__item
@@ -24,17 +36,6 @@ block content
 							img.advantages__image(src="img/adv_4.png", alt="")
 						h3.advantages__title Возврат/обмен в течении 14 дней
 						p.advantages__text полное возмещение стоимости товара
-			.slider__block
-				ul.slider__wrap
-					li.slider__item
-						a.slider__link(href="#")
-							img.slider__image(src="img/content/slide_img.jpg", alt="")
-					li.slider__item
-						a.slider__link(href="#")
-							img.slider__image(src="img/content/slide_img.jpg", alt="")
-					li.slider__item
-						a.slider__link(href="#")
-							img.slider__image(src="img/content/slide_img.jpg", alt="")
 			.goods__section
 				.goods__title-wrap
 					h2.goods__title Рекомендованные товары
@@ -201,7 +202,7 @@ block content
 						a.goods__button._favorite(href="#")
 				.text-center
 					button.button._see-more(type="button") Показать еще
-			.goods__section
+			.goods__section._windowSize-s
 				a.goods__see-all-link(href="#") Смотреть все новинки
 				.goods__title-wrap
 					h2.goods__title Новинки

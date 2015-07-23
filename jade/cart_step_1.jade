@@ -33,11 +33,11 @@ block content
 							td.order__cell._text-c
 								p.order__size 39
 							td.order__cell._text-c
-								span.order__btn._down
-								input.order__input(type="text" readonly value="1" maxlength="3")
-								span.order__btn._up
+								span.order__btn._down(data-val="-1")
+								input.order__input(type="text" readonly value="1" maxlength="3" data-min-val="1")
+								span.order__btn._up(data-val="1")
 							td.order__cell._cost._right
-								p.order__price 890 
+								p.order__price.num_format(data-val="890") 890 
 									span.order__currency грн.
 							td.order__cell
 								.order__delete
@@ -52,11 +52,11 @@ block content
 							td.order__cell._text-c
 								p.order__size 39
 							td.order__cell._text-c
-								span.order__btn._down
-								input.order__input(type="text" readonly value="1" maxlength="3")
-								span.order__btn._up
+								span.order__btn._down(data-val="-1")
+								input.order__input(type="text" readonly value="1" maxlength="3" data-min-val="1")
+								span.order__btn._up(data-val="1")
 							td.order__cell._cost._right
-								p.order__price 890 
+								p.order__price.num_format(data-val="290") 290 
 									span.order__currency грн.
 							td.order__cell
 								.order__delete
@@ -71,13 +71,13 @@ block content
 								p.order__text._italic Сумма личного счёта:
 								p.order__text._total Итого:
 							td.order__cell._right
-								p.order__text._strong 1890 
+								p.order__text._strong.num_format#price_total(data-val="1890") 1 890 
 									span.order__currency._sizeM грн.
-								p.order__text._italic._strong - 150 
+								p.order__text._italic._strong.num_format - 150 
 									span.order__currency._sizeM грн.
-								p.order__text._italic._strong - 900 
+								p.order__text._italic._strong.num_format - 900 
 									span.order__currency._sizeM грн.
-								p.order__text._sizeL 1 340 
+								p.order__text._sizeL.num_format#total 1 340 
 									span.order__currency грн.
 				.text-center
 					a.button._see-more(href="#") к оформлению
