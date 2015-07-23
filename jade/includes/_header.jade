@@ -16,10 +16,10 @@ header.header
 				each item in univ_menu
 					li.univ__item: a.univ__link(href="#") #{item}
 			.enter__block
-				p.enter__text Добро пожаловать!
-				<a href="#" class="enter__link enter">Вход</a>
-				//- a.enter__link.profile(href="#") Профиль
-				//- a.enter__link.exit(href="#") Выйти
+				p.enter__text._login Привет, Катя!
+				// <a href="#" class="enter__link enter fancy">Вход</a>
+				a.enter__link.profile(href="#") Профиль
+				a.enter__link.exit(href="#") Выйти
 				.modal__window
 					.modal__block.tabs
 						ul.modal__list.list-inline
