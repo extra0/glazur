@@ -220,7 +220,7 @@
                     <input type="text" readonly value="1" maxlength="3" data-min-val="1" class="order__input"><span data-val="1" class="order__btn _up"></span>
                   </td>
                   <td class="order__cell _cost _right">
-                    <p data-val="890" class="order__price num_format">890 <span class="order__currency">грн.</span></p>
+                    <p data-val="890" data-total="890" class="order__price num_format">890<span class="order__currency">грн.</span></p>
                   </td>
                   <td class="order__cell">
                     <div class="order__delete"></div>
@@ -237,7 +237,7 @@
                     <input type="text" readonly value="1" maxlength="3" data-min-val="1" class="order__input"><span data-val="1" class="order__btn _up"></span>
                   </td>
                   <td class="order__cell _cost _right">
-                    <p data-val="290" class="order__price num_format">290 <span class="order__currency">грн.</span></p>
+                    <p data-val="290" data-total="290" class="order__price num_format">290<span class="order__currency">грн.</span></p>
                   </td>
                   <td class="order__cell">
                     <div class="order__delete"></div>
@@ -250,16 +250,34 @@
                     <p class="attention _marg">Чтобы была учтена ваша скидка <a href="#" class="attention__link">войдите в профиль</a></p>
                   </td>
                   <td colspan="2" class="order__cell _right">
-                    <p class="order__text">Всего:</p>
-                    <p class="order__text _italic">Ваша скидка (3%):</p>
-                    <p class="order__text _italic">Сумма личного счёта:</p>
-                    <p class="order__text _total">Итого:</p>
+                    <div class="order__price-wrap">
+                      <p class="order__text">Всего:</p>
+                    </div>
+                    <div class="order__price-wrap">
+                      <p class="order__text _italic">Ваша скидка (3%):</p>
+                    </div>
+                    <div class="order__price-wrap">
+                      <p class="order__text _italic">Сумма личного счёта:</p>
+                    </div>
+                    <div class="order__price-wrap">
+                      <p class="order__text _total">Итого:</p>
+                    </div>
                   </td>
                   <td class="order__cell _right">
-                    <p id="price_total" data-val="1890" class="order__text _strong num_format">1 890 <span class="order__currency _sizeM">грн.</span></p>
-                    <p class="order__text _italic _strong num_format">- 150 <span class="order__currency _sizeM">грн.</span></p>
-                    <p class="order__text _italic _strong num_format">- 900 <span class="order__currency _sizeM">грн.</span></p>
-                    <p id="total" class="order__text _sizeL num_format">1 340 <span class="order__currency">грн.</span></p>
+                    <div class="order__price-wrap">
+                      <p id="price_total" data-val="1890" class="order__text _strong num_format">1 890</p><span class="order__currency _sizeM">грн.</span>
+                    </div>
+                    <div class="order__price-wrap">
+                      <p id="discount" class="order__text _italic _strong num_format">- 150</p><span class="order__currency _sizeM">грн.</span>
+                    </div>
+                    <div class="order__price-wrap">
+                      <p id="cash-lk" class="order__text _italic _strong num_format">- 900</p><span class="order__currency _sizeM">грн.</span>
+                    </div>
+                    <div class="order__price-wrap">
+                      <p id="total" class="order__text _sizeL num_format">1 340</p><span class="order__currency">грн.</span>
+                    </div>
+                    <input id="discount_input" type="hidden" name="discount" data-val="0.03">
+                    <input id="cash-lk_input" type="hidden" name="cash-lk" data-val="900">
                   </td>
                 </tr>
               </tfoot>

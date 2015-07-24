@@ -142,35 +142,64 @@ $(document).ready(function() {
 		return false;
 	});
 
-	//  корзина 
+	//  расчет товаров в корзине 
 	function calculator() {
+		var totalSum = $('#price_total'),
+			discountNum = $('#discount_input').attr('data-val'),
+			cashNum = $('#cash-lk_input').attr('data-val'),
+			sum = 0;
+
+		// просчет общей суммы
+		$('.order__price').each(function(){
+			sum += parseFloat($(this).attr('data-total'));
+			console.log(sum);
+		});
+
+		// вывод суммы в строку "всего:" 
+		totalSum.html(sum);
+
+		// просчет скидки
+		$('#discount').html('- ' + Math.round(sum * discountNum));
+
+		// вывод окончательной суммы
+		$('#total').html(sum - Math.round(sum * discountNum) - cashNum);
+
+		// выделяем разряды в цифрах
+		$('#total').html(numberWithCommas($('#total').html()));
+		totalSum.html(numberWithCommas(totalSum.html()));
+		$('#discount').html(numberWithCommas($('#discount').html()));
+		$('#cash-lk').html(numberWithCommas($('#cash-lk').html()));
 
 	}
-		var btn = $('.order__btn'),
-			i = 0;
+		var btn = $('.order__btn');
 
 		// изменнеие значения input
 		btn.on('click', function() {
+
 			var input = $(this).parents('tr').find('input'),
-				total = $(this).parents('tr').find('.order__price');
+				totalLine = $(this).parents('tr').find('.order__price');
 
 			// изменяем значение в инпуте
 			input.val(parseInt(input.val()) + parseInt($(this).attr('data-val')));
 
 			if (input.val() < input.attr('data-min-val')) {
 				input.val('1');
-			}
-			
+			} 
+				
 			// изменяем значение общее по товару
-			total.attr('data-total', input.val() * parseInt(total.attr('data-val')));
+			totalLine.attr('data-total', input.val() * parseInt(totalLine.attr('data-val')));
 
-			
+
+
+			calculator();
+
 
 		})
 
 		// удаляем элемент
 		$('.order__delete').click(function() {
 			$(this).parents('.order__line').remove();
+			calculator();
 		});
 
 });

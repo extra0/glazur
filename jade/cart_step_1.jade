@@ -37,7 +37,7 @@ block content
 								input.order__input(type="text" readonly value="1" maxlength="3" data-min-val="1")
 								span.order__btn._up(data-val="1")
 							td.order__cell._cost._right
-								p.order__price.num_format(data-val="890") 890 
+								p.order__price.num_format(data-val="890" data-total="890") 890
 									span.order__currency грн.
 							td.order__cell
 								.order__delete
@@ -56,7 +56,7 @@ block content
 								input.order__input(type="text" readonly value="1" maxlength="3" data-min-val="1")
 								span.order__btn._up(data-val="1")
 							td.order__cell._cost._right
-								p.order__price.num_format(data-val="290") 290 
+								p.order__price.num_format(data-val="290" data-total="290") 290
 									span.order__currency грн.
 							td.order__cell
 								.order__delete
@@ -66,18 +66,28 @@ block content
 								p.attention._marg Чтобы была учтена ваша скидка 
 									a.attention__link(href="#") войдите в профиль
 							td.order__cell._right(colspan="2")
-								p.order__text Всего:
-								p.order__text._italic Ваша скидка (3%):
-								p.order__text._italic Сумма личного счёта:
-								p.order__text._total Итого:
+								.order__price-wrap
+									p.order__text Всего:
+								.order__price-wrap
+									p.order__text._italic Ваша скидка (3%):
+								.order__price-wrap
+									p.order__text._italic Сумма личного счёта:
+								.order__price-wrap
+									p.order__text._total Итого:
 							td.order__cell._right
-								p.order__text._strong.num_format#price_total(data-val="1890") 1 890 
+								.order__price-wrap
+									p.order__text._strong.num_format#price_total(data-val="1890") 1 890
 									span.order__currency._sizeM грн.
-								p.order__text._italic._strong.num_format - 150 
+								.order__price-wrap
+									p.order__text._italic._strong.num_format#discount - 150
 									span.order__currency._sizeM грн.
-								p.order__text._italic._strong.num_format - 900 
+								.order__price-wrap
+									p.order__text._italic._strong.num_format#cash-lk - 900
 									span.order__currency._sizeM грн.
-								p.order__text._sizeL.num_format#total 1 340 
+								.order__price-wrap
+									p.order__text._sizeL.num_format#total 1 340
 									span.order__currency грн.
+								input#discount_input(type="hidden" name="discount" data-val="0.03")
+								input#cash-lk_input(type="hidden" name="cash-lk" data-val="900")
 				.text-center
 					a.button._see-more(href="#") к оформлению
