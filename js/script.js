@@ -189,11 +189,7 @@ $(document).ready(function() {
 			// изменяем значение общее по товару
 			totalLine.attr('data-total', input.val() * parseInt(totalLine.attr('data-val')));
 
-
-
 			calculator();
-
-
 		})
 
 		// удаляем элемент
