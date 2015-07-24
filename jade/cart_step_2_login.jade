@@ -67,14 +67,14 @@ block content
 								label.formalization__label
 									p.formalization__cost 0 
 										span.formalization__currency грн.
-									input.formalization__radio.radio(type="radio" name="delivery" checked)
+									input.formalization__radio.radio#shop(type="radio" name="delivery" checked)
 									| Забрать в магазине в Одессе
 									span.formalization__question
 										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
 								label.formalization__label
 									p.formalization__cost 30 
 										span.formalization__currency грн.
-									input.formalization__radio.radio(type="radio" name="delivery")
+									input.formalization__radio.radio#city(type="radio" name="delivery")
 									| Курьерская доставка по Одессе
 									span.formalization__question
 										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
@@ -82,7 +82,7 @@ block content
 									p.formalization__text По 
 										a.formalization__link(href="#") тарифам
 										|  Новой Почты
-									input.formalization__radio.radio(type="radio" name="delivery")
+									input.formalization__radio.radio#delivery(type="radio" name="delivery")
 									| Новая почта
 									span.formalization__question
 										.formalization__popup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
@@ -103,8 +103,21 @@ block content
 										td.formalization__table-item
 											p.formalization__table-text Укажите город
 										td.formalization__table-item
-											select.formalization__select.select
+											select.formalization__select.select(data-search="true")
 												option(value="1") Одесса
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
 												option(value="1") 123123
 												option(value="1") 123123
 												option(value="1") 123123
@@ -115,6 +128,21 @@ block content
 											p.formalization__table-text Укажите номер отделения
 										td.formalization__table-item
 											select.formalization__select.select
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
+												option(value="1") 123123
 												option(value="1") 123123
 												option(value="1") 123123
 												option(value="1") 123123
