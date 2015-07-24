@@ -1,8 +1,8 @@
-@media (max-width: 1110px) {
+@media (min-width: 1000px) and (max-width: 1333px) {
 	// настройка главной страницы
 	// залогиненый 
 	.enter__block {
-		margin: 16px 0 0 0;
+		margin: 16px 0 0 15px;
 	}
 	.univ {
 		&__list {
@@ -40,7 +40,8 @@
 	.slider {
 		&__block {
 			width: 100%;
-			margin-bottom: 0;
+			margin: 0 auto;
+			display: block;
 		}
 	}
 	.advantages {
@@ -55,8 +56,8 @@
 			margin: 10px 0 60px 0;
 		}
 		&__item {
-			width: 22%;
-			margin: 0 1%;
+			width: 20%;
+			margin: 0 2%;
 			vertical-align: top;
 			display: inline-block;
 			text-align: center;
@@ -131,12 +132,12 @@
 	}
 	.copyright {
 		&__block {
-			width: 43%;
+			width: 44%;
 		}
 	}
 	.footer {
 		&__link-block {
-			margin: 0;
+			margin: 0 0 0 7%;
 		}
 		&__link {
 			display: block;
@@ -348,6 +349,84 @@
 		}
 		&__info {
 			width: 44%;
+		}
+	}
+}
+@media (min-width:1175px) and (max-width: 1333px) {
+	.header {
+		&__wishes-title {
+			display: block;
+			margin: 3px 0 0 0;
+		}	
+		&__wishes-link {
+			width: auto;
+			position: relative;
+			color: #3262db;
+			border-radius: 0px;
+			background: none;
+			display: inline-block;
+			font-size: 14px;
+			line-height: 16px;
+			border-bottom: 1px solid;
+			margin: 0;
+			&:hover {
+				color: lighten(#3262db, 10%);
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+	.menu {
+		&__link {
+			font-size: 16px;
+			padding: 37px 15px;
+		}
+	}
+	.dropdown-menu {
+		&__item {
+			width: 24%;
+		}
+	}
+	.slider {
+		&__block {
+			width: 81%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.social {
+		&__text {
+			    margin: 8px 0 0 3%;
+		}
+	}
+	.intresting {
+		&__title {
+			display: inline-block;
+		}
+	}
+	.footer {
+		&__link-block {
+			margin: 0 0 0 2%;
+		}
+		&__link {
+			display: inline-block;
+		}
+	}
+}
+@media (min-width: 1300px) {
+	.goods {
+		&__item {
+			width: 19%;
+		}
+		&__bestseller {
+			width: 44%;
+			margin: 40px 0% 0 3%;
+		}
+		&__section {
+			&._windowSize-s {
+				.goods__item:last-child {
+					display: inline-block;
+				}
+			}
 		}
 	}
 }
