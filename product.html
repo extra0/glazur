@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta description="">
     <meta keywords="">
@@ -15,7 +15,10 @@
     <script src="js/plugins.js"></script>
     <!-- подключить только на странице каталога-->
     <script src="js/mCustomScrollbar.min.js"></script>
-    <!-- ====================================-->
+    <!-- =========================-->
+    <!-- только на странице товара-->
+    <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <!-- =========================-->
     <script src="js/script.js"></script>
     <title></title>
   </head>
@@ -195,7 +198,9 @@
           </ul>
           <div class="product__section">
             <div class="product__image-block">
-              <div class="product__image-wrap"><img src="img/content/boots.jpg" alt="" class="product__image"></div>
+              <div class="product__image-wrap"><img id="img_01" src="img/content/boots.jpg" alt="" data-zoom-image="img/content/large.jpg" class="product__image"></div>
+              <div id="gallery" class="product__image-thumbs"><a href="#" data-image="img/content/boots.jpg" data-zoom-image="img/content/large.jpg" class="product__thumb-link active"><img src="img/content/thumb.jpg" alt="" class="product__thumb"></a><a href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg" class="product__thumb-link"><img src="img/content/thumb.jpg" alt="" class="product__thumb"></a><a href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg" class="product__thumb-link"><img src="img/content/thumb.jpg" alt="" class="product__thumb"></a><a href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg" class="product__thumb-link"><img src="img/content/thumb.jpg" alt="" class="product__thumb"></a><a href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg" class="product__thumb-link"><img src="img/content/thumb.jpg" alt="" class="product__thumb"></a><a href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg" class="product__thumb-link"><img src="img/content/thumb.jpg" alt="" class="product__thumb"></a></div><a href="#video" data-image="" data-zoom-image="" class="fancy product__thumb-link video"><img src="img/content/thumb.jpg" alt="" class="product__thumb">
+                <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/6SLUgPOCgcA" frameborder="0" allowfullscreen></iframe></div></a>
             </div>
             <div class="product__info">
               <h1 class="product__title">Converse ALL STAR low</h1>

@@ -16,7 +16,24 @@ block content
 			.product__section
 				.product__image-block
 					.product__image-wrap
-						img.product__image(src="img/content/boots.jpg", alt="")
+						img.product__image#img_01(src="img/content/boots.jpg", alt="" data-zoom-image="img/content/large.jpg")
+					.product__image-thumbs#gallery
+						a.product__thumb-link.active(href="#" data-image="img/content/boots.jpg" data-zoom-image="img/content/large.jpg")
+							img.product__thumb(src="img/content/thumb.jpg", alt="")
+						a.product__thumb-link(href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg")
+							img.product__thumb(src="img/content/thumb.jpg", alt="")
+						a.product__thumb-link(href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg")
+							img.product__thumb(src="img/content/thumb.jpg", alt="")
+						a.product__thumb-link(href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg")
+							img.product__thumb(src="img/content/thumb.jpg", alt="")
+						a.product__thumb-link(href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg")
+							img.product__thumb(src="img/content/thumb.jpg", alt="")
+						a.product__thumb-link(href="#" data-image="img/content/small.png" data-zoom-image="img/content/large_1.jpg")
+							img.product__thumb(src="img/content/thumb.jpg", alt="")
+					a.fancy.product__thumb-link.video(href="#video" data-image="" data-zoom-image="")
+						img.product__thumb(src="img/content/thumb.jpg", alt="")
+						#video
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/6SLUgPOCgcA" frameborder="0" allowfullscreen></iframe>
 				.product__info
 					h1.product__title Converse ALL STAR low
 					p.attention._marg._sizeL Код товара: 02350 
