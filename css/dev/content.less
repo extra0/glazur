@@ -1966,6 +1966,7 @@
 				background-position: 20px;
 				background-color: rgba(255, 255, 255, 0.47);
 				border-radius: 10px;
+				z-index: 2;
 			}
 		}
 	}
@@ -1974,6 +1975,10 @@
 		vertical-align: middle;
 		margin: auto;
 		border-radius: 10px;
+		position: relative;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
 	}
 	&__image {
 		display: block;
