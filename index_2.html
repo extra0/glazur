@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta description="">
+        <meta keywords="">
+        <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+        <link href="css/styles.css" rel="stylesheet" media="all">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,700italic,800" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/plugins.js"></script>
+        <!-- подключить только на странице каталога-->
+        <script src="js/mCustomScrollbar.min.js"></script>
+        <!-- =========================-->
+        <!-- только на странице товара-->
+        <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+        <!-- =========================-->
+        <script src="js/script.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div class="fancybox-placeholder"></div>
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="container-fluid">
+                    <div class="header__top">
+                        <div class="cart__block">
+                            <div class="cart__image">
+                                <div class="cart__info">
+                                    <p class="cart__num-item">3</p>
+                                    <p class="cart__text _strong">товара</p>
+                                    <p class="cart__text">на сумму</p>
+                                    <p class="cart__price">10 546 <span class="cart__text">грн.</span></p>
+                                </div>
+                            </div>
+                            <p class="cart__title">Корзина</p><span class="cart__empty">пока пуста :(</span><a href="#" class="button _cart">Оформить</a>
+                        </div>
+                        <ul class="univ__list list-inline">
+                            <li class="univ__item"><a href="#" class="univ__link">Оплата и доставка</a></li>
+                            <li class="univ__item"><a href="#" class="univ__link">Скидки</a></li>
+                            <li class="univ__item"><a href="#" class="univ__link">Отзывы</a></li>
+                            <li class="univ__item"><a href="#" class="univ__link">Контакты</a></li>
+                            <li class="univ__item"><a href="#" class="univ__link">Возврат</a></li>
+                            <li class="univ__item"><a href="#" class="univ__link">Блог</a></li>
+                            <li class="univ__item"><a href="#" class="univ__link">О магазине</a></li>
+                        </ul>
+                        <div class="enter__block">
+                            <p class="enter__text">Добро пожаловать!</p>
+                            <a href="#" class="enter__link enter fancy">Вход</a>
+                            <!-- <a href="#" class="enter__link profile">Профиль</a><a href="#" class="enter__link exit">Выйти</a> -->
+                            <div class="modal__window">
+                                <div class="modal__block tabs">
+                                    <ul class="modal__list list-inline">
+                                        <li class="modal__item"><a href="#enter" class="modal__tab-link">Вход</a></li>
+                                        <li class="modal__item"><a href="#registration" class="modal__tab-link">регистрация</a></li>
+                                    </ul>
+                                    <div id="enter">
+                                        <form action="#" class="modal__form">
+                                            <input type="email" placeholder="Електронная почта" required class="modal__input">
+                                            <input type="password" placeholder="пароль" required class="modal__input">
+                                            <label class="modal__label">
+                                                <input type="checkbox" class="modal__input checkbox">Запомнить меня
+                                                </label><a href="#" class="modal__link">Напомнить пароль</a>
+                                                <div class="modal__footer">
+                                                    <button type="submit" class="button _submit">Войти</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="registration">
+                                            <form action="#" class="modal__form">
+                                                <input type="text" placeholder="Имя и Фамилия" required class="modal__input">
+                                                <input type="email" placeholder="Електронная почта" required class="modal__input">
+                                                <input type="password" placeholder="пароль" required class="modal__input">
+                                                <input type="tel" placeholder="телефон" required class="modal__input mask">
+                                                <input type="text" placeholder="город" required class="modal__input">
+                                                <p class="modal__text">Регистрируясь, вы соглашаетесь с <a href="#" class="modal__link _b-solid">пользовательским соглашением</a></p>
+                                                <div class="modal__footer">
+                                                    <button type="submit" class="button _submit">зарегистрироваться</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+                            <div class="header__location"><a href="#" class="header__location-link"><span class="header__line">Одесса, “Сити 25”, бутик №337</span></a></div>
+                            <div class="header__time">
+                                <p class="header__time-text">Звоните с 11<sup>00</sup> до 18<sup>00</sup></p>
+                                <p class="header__time-text">Выходной: понедельник</p>
+                            </div>
+                            <div class="header__phone-block">
+                                <p onclick="window.location.href='tel:+380938818299';" class="header__phone"><span class="header__prefix">+38 093 </span>881-82-99</p>
+                                <p onclick="window.location.href='tel:+380500535302';" class="header__phone hide"><span class="header__prefix">+38 050 </span>053-53-02</p>
+                                <p onclick="window.location.href='tel:+380960470318';" class="header__phone hide"><span class="header__prefix">+38 096 </span>047-03-18</p>
+                                <p class="header__phone-text">И еще <a href="#" class="header__phone-link">2 телефона</a></p><span class="header__phone-image"></span>
+                            </div>
+                            <!-- <div class="header__wishes-block">
+                                <p class="header__wishes-title">Желания</p><a href="#" class="header__wishes-link"> 7 товаров   </a>
+                            </div>
+                            <p class="attention _header">Внимание! 1 и 2 мая – выходные дни</p> -->
+                        </div>
+                        <div class="menu">
+                            <div class="container-fluid">
+                                <div class="smart-search__section">
+                                    <form action="#" class="smart-search__form">
+                                        <input type="search" placeholder="поиск" required class="smart-search__input">
+                                        <button type="submit" class="smart-search__button"></button>
+                                    </form>
+                                    <div class="smart-search__block">
+                                        <div class="smart-search__item"><a href="#" class="smart-search__link">
+                                            <div class="smart-search__image-wrap"><img src="img/content/smart_thumbs.jpg" alt="" class="smart-search__image"></div>
+                                            <div class="smart-search__info-wrap">
+                                                <p class="smart-search__title">сникерсы puma super</p>
+                                                <p class="smart-search__price">1890<span class="smart-search__currency">грн.</span></p>
+                                            </div></a></div>
+                                            <div class="smart-search__item"><a href="#" class="smart-search__link">
+                                                <div class="smart-search__image-wrap"><img src="img/content/smart_thumbs_2.jpg" alt="" class="smart-search__image"></div>
+                                                <div class="smart-search__info-wrap">
+                                                    <p class="smart-search__title">сникерсы puma super</p>
+                                                    <p class="smart-search__price">1890<span class="smart-search__currency">грн.</span></p>
+                                                </div></a></div>
+                                                <div class="smart-search__item"><a href="#" class="smart-search__link">
+                                                    <div class="smart-search__image-wrap"><img src="img/content/smart_thumbs.jpg" alt="" class="smart-search__image"></div>
+                                                    <div class="smart-search__info-wrap">
+                                                        <p class="smart-search__title">сникерсы puma super</p>
+                                                        <p class="smart-search__price">1890<span class="smart-search__currency">грн.</span></p>
+                                                    </div></a></div>
+                                                    <div class="smart-search__item"><a href="#" class="smart-search__link">
+                                                        <div class="smart-search__image-wrap"><img src="img/content/smart_thumbs_2.jpg" alt="" class="smart-search__image"></div>
+                                                        <div class="smart-search__info-wrap">
+                                                            <p class="smart-search__title">zara кеды leather good best keds color reen</p>
+                                                            <p class="smart-search__price">1890<span class="smart-search__currency">грн.</span></p>
+                                                        </div></a></div>
+                                                        <div class="text-center"><a href="#" class="smart-search__all-result">Все результаты поиска →</a></div>
+                                                    </div>
+                                                </div>
+                                                <ul class="menu__list list-inline">
+                                                    <li class="menu__item"><a href="#" class="menu__link">Женщинам</a>
+                                                    <ul class="dropdown-menu__list list-inline">
+                                                        <li class="dropdown-menu__item">
+                                                            <p class="dropdown-menu__item-title">Одежда</p><a href="#" class="dropdown-menu__item-link">Эксклюзивная коллекция</a><a href="#" class="dropdown-menu__item-link">Юбки, Платья, Сарафаны</a><a href="#" class="dropdown-menu__item-link">Футболки и Рубашки</a><a href="#" class="dropdown-menu__item-link">Джинсы и Шорты</a><a href="#" class="dropdown-menu__item-link">Верхняя одежда</a><a href="#" class="dropdown-menu__item-link">Свитера и Кофты</a><a href="#" class="dropdown-menu__item-link">Спортивные костюмы</a>
+                                                        </li>
+                                                        <li class="dropdown-menu__item">
+                                                            <p class="dropdown-menu__item-title">Обувь</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                        </li>
+                                                        <li class="dropdown-menu__item">
+                                                            <p class="dropdown-menu__item-title">Аксессуары</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                        </li>
+                                                        <li class="dropdown-menu__item">
+                                                            <p class="dropdown-menu__item-title">Аксессуары</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                        </li>
+                                                        <li class="dropdown-menu__item">
+                                                            <p class="dropdown-menu__item-title">Аксессуары</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                        </li>
+                                                        <li class="dropdown-menu__item">
+                                                            <p class="dropdown-menu__item-title">Аксессуары</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__link">Мужчинам</a>
+                                                <ul class="dropdown-menu__list list-inline">
+                                                    <li class="dropdown-menu__item">
+                                                        <p class="dropdown-menu__item-title">Одежда</p><a href="#" class="dropdown-menu__item-link">Эксклюзивная коллекция</a><a href="#" class="dropdown-menu__item-link">Юбки, Платья, Сарафаны</a><a href="#" class="dropdown-menu__item-link">Футболки и Рубашки</a><a href="#" class="dropdown-menu__item-link">Джинсы и Шорты</a><a href="#" class="dropdown-menu__item-link">Верхняя одежда</a><a href="#" class="dropdown-menu__item-link">Свитера и Кофты</a><a href="#" class="dropdown-menu__item-link">Спортивные костюмы</a>
+                                                    </li>
+                                                    <li class="dropdown-menu__item">
+                                                        <p class="dropdown-menu__item-title">Обувь</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                    </li>
+                                                    <li class="dropdown-menu__item">
+                                                        <p class="dropdown-menu__item-title">Обувь</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                    </li>
+                                                    <li class="dropdown-menu__item">
+                                                        <p class="dropdown-menu__item-title">Обувь</p><a href="#" class="dropdown-menu__item-link">Кеды, кроссовки</a><a href="#" class="dropdown-menu__item-link">туфли</a><a href="#" class="dropdown-menu__item-link">мокасины</a><a href="#" class="dropdown-menu__item-link">эспадрильи</a><a href="#" class="dropdown-menu__item-link">сандали, шлепанцы</a><a href="#" class="dropdown-menu__item-link">Ботинки, сапоги</a><a href="#" class="dropdown-menu__item-link">UGG, валенки</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu__item"><a href="#" class="menu__link">Новинки</a></li>
+                                            <li class="menu__item"><a href="#" class="menu__link">В наличии</a></li>
+                                            <li class="menu__item"><a href="#" class="menu__link">Распродажа</a></li>
+                                            <li class="menu__item"><a href="#" class="menu__link">ORYGINAL</a></li>
+                                            <li class="menu__item"><a href="#" class="menu__link">Бренды</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="content">
+                                <div class="container-fluid">
+                                    <div class="slider__block">
+                                        <ul class="slider__wrap">
+                                            <li class="slider__item"><a href="#" class="slider__link"><img src="img/content/slide_img.jpg" alt="" class="slider__image"></a></li>
+                                            <li class="slider__item"><a href="#" class="slider__link"><img src="img/content/slide_img.jpg" alt="" class="slider__image"></a></li>
+                                            <li class="slider__item"><a href="#" class="slider__link"><img src="img/content/slide_img.jpg" alt="" class="slider__image"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="advantages__block">
+                                        <ul class="advantages__list">
+                                            <li class="advantages__item">
+                                                <div class="advantages__image-wrap"><img src="img/adv_1.png" alt="" class="advantages__image"></div>
+                                                <h3 class="advantages__title">Доставка по всей Украине</h3>
+                                                <p class="advantages__text">возможность бесплатной доставки</p>
+                                            </li>
+                                            <li class="advantages__item">
+                                                <div class="advantages__image-wrap"><img src="img/adv_2.png" alt="" class="advantages__image"></div>
+                                                <h3 class="advantages__title">Отсутствие предоплаты</h3>
+                                                <p class="advantages__text">оплата наличными в момент доставки</p>
+                                            </li>
+                                            <li class="advantages__item">
+                                                <div class="advantages__image-wrap"><img src="img/adv_3.png" alt="" class="advantages__image"></div>
+                                                <h3 class="advantages__title">Магазин в Одессе</h3>
+                                                <p class="advantages__text">возможность примерки и самовывоза</p>
+                                            </li>
+                                            <li class="advantages__item">
+                                                <div class="advantages__image-wrap"><img src="img/adv_4.png" alt="" class="advantages__image"></div>
+                                                <h3 class="advantages__title">Возврат/обмен в течении 14 дней</h3>
+                                                <p class="advantages__text">полное возмещение стоимости товара</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="goods__section">
+                                        <div class="goods__title-wrap">
+                                            <h2 class="goods__title">Рекомендованные товары</h2>
+                                        </div>
+                                        <div class="goods__item"><a href="#" class="goods__item-link">
+                                            <div class="goods__block-condition">
+                                                <p class="goods__condition _hot"></p>
+                                                <p class="goods__condition _sale"></p>
+                                                <p class="goods__condition _new"></p>
+                                            </div><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+                                            <div class="goods__footer">
+                                                <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark<span class="goods__video"></span></a>
+                                                <p class="goods__price">1 260 <span class="goods__currency">грн</span></p>
+                                                <p class="goods__price _old">2 600 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                                            </div>
+                                        </div>
+                                        <div class="goods__item"><a href="#" class="goods__item-link">
+                                            <div class="goods__block-condition">
+                                                <p class="goods__condition _hot"></p>
+                                                <p class="goods__condition _new"></p>
+                                            </div><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+                                            <div class="goods__footer">
+                                                <p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+                                                <p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                                            </div>
+                                        </div>
+                                        <div class="goods__item"><a href="#" class="goods__item-link">
+                                            <div class="goods__block-condition">
+                                                <p class="goods__condition _sale"></p>
+                                                <p class="goods__condition _new"></p>
+                                            </div><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+                                            <div class="goods__footer">
+                                                <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+                                                <p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                                            </div>
+                                        </div>
+                                        <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+                                        <div class="goods__footer">
+                                            <p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+                                            <p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                                        </div>
+                                    </div>
+                                    <div class="goods__bestseller"><a href="#" class="goods__item-link"><img src="img/content/main_goods.jpg" alt="" class="goods__bestseller-image"><img src="img/content/main_goods_2.jpg" alt="" class="goods__bestseller-image _not-active"></a>
+                                    <div class="goods__bestseller-footer">
+                                        <p class="goods__bestseller-info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__bestseller-link">Куртка boss<span class="goods__video"></span></a>
+                                        <p class="goods__bestseller-price">3 660 <span class="goods__bestseller-currency">грн</span></p>
+                                        <p class="goods__bestseller-price _old">2 600 <span class="goods__currency">грн</span></p><a href="#" class="goods__bestseller-button _cart"></a><a href="#" class="goods__bestseller-button _favorite"></a>
+                                    </div>
+                                </div>
+                                <div class="goods__item"><a href="#" class="goods__item-link">
+                                    <div class="goods__block-condition">
+                                        <p class="goods__condition _hot"></p>
+                                    </div><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+                                    <div class="goods__footer">
+                                        <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+                                        <p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                                    </div>
+                                </div>
+                                <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+                                <div class="goods__footer">
+                                    <p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+                                    <p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                                </div>
+                            </div>
+                            <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+                            <div class="goods__footer">
+                                <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+                                <p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                            </div>
+                        </div>
+                        <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+                        <div class="goods__footer">
+                            <p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+                            <p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                        </div>
+                    </div>
+                    <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+                    <div class="goods__footer">
+                        <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+                        <p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                    </div>
+                </div>
+                <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+                <div class="goods__footer">
+                    <p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+                    <p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+                </div>
+            </div>
+            <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+            <div class="goods__footer">
+                <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+                <p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+            </div>
+        </div>
+        <div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+        <div class="goods__footer">
+            <p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+            <p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="button" class="button _see-more">Показать еще</button>
+    </div>
+</div>
+<div class="goods__section _windowSize-s"><a href="#" class="goods__see-all-link">Смотреть все новинки</a>
+<div class="goods__title-wrap">
+    <h2 class="goods__title">Новинки</h2>
+</div>
+<div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+<div class="goods__footer">
+    <p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+    <p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+</div>
+</div>
+<div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+<div class="goods__footer">
+<p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+<p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+</div>
+</div>
+<div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods.jpg" alt="" class="goods__image"><img src="img/content/goods_2.jpg" alt="" class="goods__image _not-active"></a>
+<div class="goods__footer">
+<p class="goods__info">Есть в наличии</p><a href="#" class="goods__link">Куртка PAUL&Shark</a>
+<p class="goods__price">1 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+</div>
+</div>
+<div class="goods__item"><a href="#" class="goods__item-link"><img src="img/content/goods_2.jpg" alt="" class="goods__image"><img src="img/content/goods.jpg" alt="" class="goods__image _not-active"></a>
+<div class="goods__footer">
+<p class="goods__info _delivery">Доставка 2-3 недели</p><a href="#" class="goods__link">Куртка GUCCI</a>
+<p class="goods__price">3 260 <span class="goods__currency">грн</span></p><a href="#" class="goods__button _cart"></a><a href="#" class="goods__button _favorite"></a>
+</div>
+</div>
+</div>
+<div class="goods__section"><a href="#" class="goods__see-all-link">Смотреть все бренды</a>
+<div class="goods__title-wrap">
+<h2 class="goods__title">Бренды</h2>
+</div>
+<div class="goods__list-wrap">
+<ul class="goods__list list-inline">
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand.jpg" alt="" class="goods__list-image"></a></li>
+<li class="goods__list-item"><a href="#" class="goods__list-link"><img src="img/content/brand_2.jpg" alt="" class="goods__list-image"></a></li>
+</ul>
+</div>
+</div>
+<div class="description__block">
+<h1 class="description__title">Модная одежда и обувь от интернет-магазина</h1>
+<p class="description__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+<p class="description__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+</div>
+</div>
+</div>
+<div class="buffer"></div>
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="footer__top">
+<div class="intresting__section">
+<p class="intresting__title">Кое-что интересное:</p>
+<div class="intresting__block"><a href="#" class="intresting__changer"></a>
+<div class="intresting__inner active"><img src="img/int_1.png" alt="" class="intresting__image">
+<p class="intresting__text">быстрая доставка товаров по всей Украине</p>
+</div>
+<div class="intresting__inner"><img src="img/int_2.png" alt="" class="intresting__image">
+<p class="intresting__text">быстрая доставка Украине</p>
+</div>
+<div class="intresting__inner"><img src="img/int_3.png" alt="" class="intresting__image">
+<p class="intresting__text">быстрая товаров по всей Украине</p>
+</div>
+<div class="intresting__inner"><img src="img/int_4.png" alt="" class="intresting__image">
+<p class="intresting__text">товаров по всей Украине</p>
+</div>
+<div class="intresting__inner"><img src="img/int_5.png" alt="" class="intresting__image">
+<p class="intresting__text">быстрая доставка</p>
+</div>
+<div class="intresting__inner"><img src="img/int_6.png" alt="" class="intresting__image">
+<p class="intresting__text">быстрая доставка товаров по всей Украине</p>
+</div>
+</div>
+</div>
+<ul class="univ__list list-inline">
+<li class="univ__item"><a href="#" class="univ__link">Оплата и доставка</a></li>
+<li class="univ__item"><a href="#" class="univ__link">Скидки</a></li>
+<li class="univ__item"><a href="#" class="univ__link">Отзывы</a></li>
+<li class="univ__item"><a href="#" class="univ__link">Контакты</a></li>
+<li class="univ__item"><a href="#" class="univ__link">Возврат</a></li>
+<li class="univ__item"><a href="#" class="univ__link">Блог</a></li>
+<li class="univ__item"><a href="#" class="univ__link">О магазине</a></li>
+</ul>
+<div data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki" data-yashareTheme="counter" class="yashare-auto-init"></div>
+</div>
+<div class="footer__middle">
+<div class="phones__block">
+<p onclick="window.location.href='tel:+380938818299';" class="phones__number"><span class="phones__prefix">+38 093 </span>881-82-99</p>
+<p onclick="window.location.href='tel:+380500535302';" class="phones__number"><span class="phones__prefix">+38 050 </span>053-53-02</p>
+<p onclick="window.location.href='tel:+380960470318';" class="phones__number"><span class="phones__prefix">+38 096  </span>047-03-18</p>
+</div>
+<div class="social__block"><a href="#" class="social__link"><img src="img/fb.png" alt="" class="social__image"></a><a href="#" class="social__link"><img src="img/vk.png" alt="" class="social__image"></a><a href="#" class="social__link"><img src="img/tw.png" alt="" class="social__image"></a><a href="#" class="social__link"><img src="img/inst.png" alt="" class="social__image"></a><span class="social__text">Cледите за Глазурью ;)</span></div>
+</div>
+<div class="footer__bottom">
+<div class="develop__block">
+<p class="develop__text">Создание сайта - студия “<a href="#" class="develop__link">Максимус</a>”</p>
+</div>
+<div class="copyright__block">
+<p class="copyright__text">© Интернет Магазин Одежды "Глазурь™".<br><span class="copyright__extra-text">Все права на использование торговой марки Глазурь™ защищены законом Украины</span></p>
+</div>
+<div class="footer__link-block"><a href="#" class="footer__link">Карта сайта</a><a href="#" class="footer__link">Обратная связь</a></div>
+</div>
+</div>
+</footer>
+</body>
+</html>
