@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 		// показываем кнопку ОФОРМИТЬ и скрывает текст под корзиной
 		$('.cart__empty').hide();
-		$('.button._cart').show().css('display', 'block');
+		$('.button._cart').show().css('display', 'inline-block');
 
 		// обработка полета
 		$("html, body").animate({
