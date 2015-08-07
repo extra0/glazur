@@ -46,6 +46,7 @@ $(document).ready(function() {
 	// открываем модальное окно входа / регистарции
 	$('.enter').click(function() {
 		$('body').prepend('<div class="wrap"></div>');
+		$('body').scrollTop(0);
 		$('.modal__window').slideDown(500);
 		return false;
 	});
@@ -233,6 +234,18 @@ $(document).ready(function() {
 		zoomWindowFadeOut: 500,
 		lensFadeIn: 500,
 		lensFadeOut: 500
+	});
+
+	// показать\скрыть текст в описании
+	$('.description__more').click(function() {
+	  $('.description__inner').toggleClass('show');
+	  $(this).toggleClass('show');
+	  if ($(this).hasClass('show')) {
+	    $(this).html('Скрыть текст');
+	  } else {
+	    $(this).html('Показать еще');
+	  }
+	  return false;
 	});
 
 });

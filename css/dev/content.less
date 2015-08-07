@@ -519,6 +519,37 @@
 		margin: 0 1%;
 		display: inline-block;
 	}
+	&__inner {
+		margin-bottom: 20px;
+		overflow: hidden;
+		max-height: 190px;
+		position: relative;
+		-webkit-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		&.show {
+			max-height: 2000px;
+			&:before {
+				display: none;
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			box-shadow: inset 0px -40px 50px #f2f2f2;
+			width: 100%;
+			height: 28px;
+			bottom: -8px;
+			z-index: 2;
+		}
+	}
+	&__more {
+		border-bottom: 1px dashed;
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
 }
 
 // универсальные правила для страниц
