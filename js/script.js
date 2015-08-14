@@ -90,7 +90,7 @@ $(document).ready(function() {
 	}
 
 	// полет товара в корзину
-	$("a._cart").click(function() {
+	$("._cart").click(function() {
 		// клонирование картинки для полета
 		$(this).parent().parent().find('.goods__item-link img:not(._not-active)').clone().css({
 			'visibility': 'hidden',
