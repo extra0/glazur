@@ -16,10 +16,24 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// выпадающее меню
-	$('.menu__item').hover(function() {
-		$(this).find('.dropdown-menu__list').slideToggle(100);
-	});
+	// выпадающее меню с задержкой и случайным наведением
+	var intervalID;
+	$(".menu__item").hover(
+		function() {
+			var popup = $(this).find(".dropdown-menu__list");
+
+			intervalID = setTimeout(
+				function() {
+					popup.slideDown(100);
+				}, 300);
+
+		},
+		function() {
+			$(".dropdown-menu__list").slideUp(100);
+			clearInterval(intervalID);
+		}
+	);
+
 
 	// вызов слайдера
 	$('.slider__wrap').bxSlider({
