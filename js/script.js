@@ -21,12 +21,10 @@ $(document).ready(function() {
 	$(".menu__item").hover(
 		function() {
 			var popup = $(this).find(".dropdown-menu__list");
-
 			intervalID = setTimeout(
 				function() {
 					popup.slideDown(100);
 				}, 300);
-
 		},
 		function() {
 			$(".dropdown-menu__list").slideUp(100);
