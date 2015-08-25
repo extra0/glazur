@@ -137,6 +137,9 @@ $(document).ready(function() {
 			}, 860, function() {
 				$(this).remove();
 			});
+		setTimeout(function(){
+			$("._cart").find('img').remove();
+		}, 1000);
 	});
 
 	// кастомный скролл в фильтре
@@ -227,7 +230,7 @@ $(document).ready(function() {
 			delivery = $('#delivery-styler');
 
 		if (shop.hasClass('checked')) {
-			shop.parents('.formalization__block').find('.formalization__table').hide();
+			shop.parents('.formalization__block').find('.formalization__footer').prev().hide();
 		} else if (city.hasClass('checked')) {
 			shop.parents('.formalization__block').find('.formalization__table').show();
 			shop.parents('.formalization__block').find('.formalization__table-line').slice(0, 2).hide();
