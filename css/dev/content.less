@@ -2054,3 +2054,41 @@
     color: #AB2794;
     font-weight: bold
 }
+
+// бренды 
+.brand {
+	&__block {
+		border-bottom: 1px solid #bdbbbc;
+		padding: 30px 0 40px;
+	}
+	&__word {
+		font-size: 60px;
+		font-weight: 800;
+		color: #9c4b9b;
+		display: inline-block;
+		line-height: 48px;
+		vertical-align: top;
+		width: 20%;
+		float: left;
+	}
+	&__list {
+		margin: 0 0 0 20%;
+	    padding: 0;
+	    list-style-type: none;
+	    display: block;
+	}
+	&__item {
+		display: inline-block;
+	    width: 20%;
+	    vertical-align: top;
+	    margin-right: 6%;
+	    margin-bottom: 5px;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		font-size: 50%;
+		color: #000;
+	}
+}
